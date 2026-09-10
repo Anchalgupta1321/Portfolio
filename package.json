@@ -1,0 +1,12 @@
+{
+  "name": "anchal-gupta-portfolio",
+  "version": "1.0.0",
+  "description": "Personal Portfolio of Anchal Gupta - AI/ML Engineer & Software Developer",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "keywords": ["portfolio", "ai-engineer", "software-developer", "machine-learning", "rag", "fastapi", "react"],
+  "author": "Anchal Gupta",
+  "license": "MIT"
+}

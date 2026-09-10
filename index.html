@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anchal Gupta | Software Engineer | AI/ML & Data</title>
+  <meta name="description" content="Portfolio of Anchal Gupta - Software Engineer | AI/ML & Data. Building reliable software applications, data-driven systems, and intelligent AI solutions." />
+  <meta name="keywords" content="Anchal Gupta, Software Engineer, AI/ML Engineer, Data Engineer, Generative AI, RAG, FastAPI, React, Next.js, Python, PostgreSQL, Bangalore" />
+  <meta name="author" content="Anchal Gupta" />
+  <meta name="theme-color" content="#070a12" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-dark text-light antialiased">
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress" class="scroll-progress-bar"></div>
+
+  <!-- Background Grids, Ambient Glow & Cyber Telemetry -->
+  <div class="ambient-grid-pattern"></div>
+  <div class="cyber-scanlines"></div>
+  <div class="cyber-radar-beam"></div>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+  <canvas id="neural-canvas"></canvas>
+
+  <!-- ==================== CLEAN NAVBAR ==================== -->
+  <header class="navbar-wrapper fixed top-0 left-0 w-full z-50">
+    <nav class="nav-container max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo flex items-center gap-2.5 group">
+        <div class="logo-badge">
+          <span>AG</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="logo-text font-outfit font-bold text-lg tracking-tight text-white group-hover:text-cyan-400 transition-colors">
+            Anchal<span class="text-gradient-dual">.dev</span>
+          </span>
+          <span class="text-[10px] font-mono text-slate-400 -mt-1 tracking-wider uppercase">Software · AI/ML · Data</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="nav-links desktop-nav flex items-center gap-1 font-medium text-xs text-slate-300">
+        <a href="#home" class="nav-link active" data-section="home">Home</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#achievements" class="nav-link" data-section="achievements">Achievements</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions flex items-center gap-2">
+        <button id="open-resume-btn" class="btn btn-xs btn-glass" title="View Resumes">
+          <i class="fa-solid fa-file-lines text-indigo-400"></i>
+          <span>Resume</span>
+        </button>
+
+        <a href="#contact" class="btn btn-xs btn-primary">
+          <i class="fa-solid fa-paper-plane text-[10px]"></i>
+          <span>Let's Talk</span>
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer Overlay Menu -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <div class="mobile-drawer-content">
+        <div class="mobile-nav-links flex flex-col gap-1.5 p-4 text-xs font-medium">
+          <a href="#home" class="mobile-nav-link active"><i class="fa-solid fa-house w-5"></i> Home</a>
+          <a href="#about" class="mobile-nav-link"><i class="fa-solid fa-user w-5"></i> About Me</a>
+          <a href="#projects" class="mobile-nav-link"><i class="fa-solid fa-layer-group w-5 text-indigo-400"></i> Featured Projects</a>
+          <a href="#experience" class="mobile-nav-link"><i class="fa-solid fa-briefcase w-5 text-cyan-400"></i> Experience</a>
+          <a href="#skills" class="mobile-nav-link"><i class="fa-solid fa-code w-5 text-emerald-400"></i> Technical Skills</a>
+          <a href="#achievements" class="mobile-nav-link"><i class="fa-solid fa-trophy w-5 text-yellow-400"></i> Achievements &amp; Programs</a>
+          <a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-envelope w-5 text-rose-400"></i> Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== 1. HOME / HERO SECTION ==================== -->
+    <section id="home" class="hero-section">
+      <div class="hero-wrapper relative z-10">
+        
+        <!-- Left Column: Hero Content & CTAs -->
+        <div class="hero-content-col">
+          
+          <!-- Live Status Pill (Always prominent on top) -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-3.5 hero-pill">
+            <span class="status-pulse"></span>
+            <span class="text-xs font-mono text-slate-200">
+              Open for <strong class="text-indigo-300">Software Engineering</strong>, <strong class="text-cyan-300">AI/ML</strong> &amp; <strong class="text-emerald-300">Data</strong> Roles
+            </span>
+          </div>
+
+          <!-- Name Title -->
+          <h1 class="hero-title font-outfit font-black text-3xl sm:text-5xl lg:text-6xl tracking-tight text-white mb-2 leading-tight">
+            Anchal Gupta
+          </h1>
+
+          <!-- Positioning Title -->
+          <div class="hero-subtitle-container mb-3 flex items-center justify-start gap-2 flex-wrap">
+            <h2 class="font-outfit text-xl sm:text-2xl lg:text-3xl font-bold text-gradient-dual">
+              Software Engineer | AI/ML &amp; Data
+            </h2>
+          </div>
+
+          <!-- Core Tagline -->
+          <p class="hero-tagline text-sm sm:text-base text-slate-300 font-medium leading-relaxed mb-5 max-w-xl">
+            I build reliable software applications, data-driven systems, and intelligent AI solutions across software engineering, machine learning, Generative AI, and automation.
+          </p>
+
+          <!-- CTA Action Buttons & Social Icons -->
+          <div class="hero-actions flex flex-wrap items-center gap-2.5 mb-5">
+            <a href="#projects" class="btn btn-primary btn-sm group">
+              <span>View Projects</span>
+              <i class="fa-solid fa-arrow-down group-hover:translate-y-0.5 transition-transform text-xs"></i>
+            </a>
+            <button id="hero-resume-trigger" class="btn btn-secondary btn-sm">
+              <i class="fa-solid fa-file-arrow-down text-indigo-400"></i>
+              <span>Download Resume</span>
+            </button>
+            <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-icon-sm" title="GitHub: Anchalgupta1321">
+              <i class="fa-brands fa-github text-sm"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/anchal-gupta-71436b254/" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-icon-sm" title="LinkedIn: Anchal Gupta">
+              <i class="fa-brands fa-linkedin-in text-sm"></i>
+            </a>
+            <a href="mailto:guptaanchal0321@gmail.com" class="btn btn-glass btn-icon-sm" title="Direct Email: guptaanchal0321@gmail.com">
+              <i class="fa-solid fa-envelope text-sm"></i>
+            </a>
+            <a href="tel:+917807647835" class="btn btn-glass btn-icon-sm" title="Phone: +91 7807647835">
+              <i class="fa-solid fa-phone text-sm"></i>
+            </a>
+          </div>
+
+          <!-- Hero Metric Chips -->
+          <div class="flex flex-wrap items-center gap-2 mb-3.5">
+            <span class="skill-chip font-mono text-[11px]"><i class="fa-solid fa-graduation-cap text-indigo-400"></i> 8.56 CGPA (Vidyashilp)</span>
+            <span class="skill-chip font-mono text-[11px]"><i class="fa-solid fa-briefcase text-cyan-400"></i> 3+ Industry Internships</span>
+            <span class="skill-chip font-mono text-[11px]"><i class="fa-solid fa-code-commit text-purple-400"></i> 8 Production Projects</span>
+            <span class="skill-chip font-mono text-[11px]"><i class="fa-solid fa-trophy text-yellow-400"></i> 1st IEEE Idea Pitch</span>
+          </div>
+
+          <!-- Real-World Work Live Indicators -->
+          <div class="flex flex-wrap items-center gap-2 text-[11px] font-mono">
+            <a href="https://enterprise-research-agent-nzp42bp4cvdaeaaoybprqi.streamlit.app/" target="_blank" rel="noopener noreferrer" class="badge-live hover:border-emerald-400/60 hover:text-emerald-300 transition-colors" title="Launch Enterprise AI Research Agent Live App">
+              <i class="fa-solid fa-circle text-[6px] text-emerald-400 animate-pulse"></i> LIVE: Enterprise AI Research Agent <i class="fa-solid fa-arrow-up-right-from-square text-[9px] ml-0.5"></i>
+            </a>
+            <a href="https://www.pavithramfoods.com/" target="_blank" rel="noopener noreferrer" class="badge-live hover:border-cyan-400/60 hover:text-cyan-300 transition-colors" title="Visit Pavithram Foods Official Website">
+              <i class="fa-solid fa-circle text-[6px] text-cyan-400"></i> LIVE: Pavithram Foods <i class="fa-solid fa-arrow-up-right-from-square text-[9px] ml-0.5"></i>
+            </a>
+            <span class="badge-live"><i class="fa-solid fa-circle text-[6px] text-purple-400"></i> PROD: GRX10 Solutions</span>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Hero Portrait Showcase Card -->
+        <div class="hero-photo-col">
+          <div class="hero-portrait-card-container relative">
+            
+            <!-- Ambient Glow Backdrop -->
+            <div class="portrait-glow-halo"></div>
+            
+            <!-- Glass Portrait Card -->
+            <div class="hero-portrait-card glass-card p-3.5 relative z-10 text-center">
+              
+              <!-- Status Pill on Top -->
+              <div class="inline-flex items-center justify-center gap-2 px-3 py-1 rounded-full mb-2.5 status-pill-card mx-auto">
+                <span class="status-pulse" style="width:7px;height:7px;"></span>
+                <span class="text-[11px] font-mono font-semibold text-slate-200">Online &amp; Open for Roles</span>
+              </div>
+
+              <!-- Clean Portrait Image Frame -->
+              <div class="portrait-img-wrapper mx-auto mb-3">
+                <img src="IMG_20260124_144023.png" alt="Anchal Gupta - Software Engineer | AI/ML & Data" class="hero-portrait-img" />
+              </div>
+              
+              <!-- Card Footer Info (Center Aligned & Spaced) -->
+              <div class="portrait-card-footer pt-2.5 border-t border-slate-800/80 text-center">
+                <div class="flex items-center justify-center gap-1.5 mb-1 flex-wrap">
+                  <i class="fa-solid fa-briefcase text-cyan-400 text-xs"></i>
+                  <h3 class="font-outfit font-bold text-sm text-white">Jr. Software Engineer</h3>
+                  <span class="text-xs font-mono text-cyan-300">@ GRX10</span>
+                </div>
+                <div class="flex items-center justify-center gap-2 text-[11px] font-mono text-slate-400 flex-wrap">
+                  <span><i class="fa-solid fa-location-dot text-indigo-400"></i> Bengaluru, India</span>
+                  <span>•</span>
+                  <span class="text-emerald-400 font-bold">8.56 CGPA</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 2. AT A GLANCE (WHAT I WORK ON) ==================== -->
+    <section class="section-container py-8 relative">
+      <div class="max-w-5xl mx-auto px-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <div class="glass-card p-5 sm:p-6">
+            <div class="flex items-center gap-2 mb-2.5">
+              <span class="text-xl">💻</span>
+              <h3 class="font-outfit font-bold text-sm text-white">Software Engineering</h3>
+            </div>
+            <p class="text-[11px] text-slate-300 leading-relaxed font-mono">
+              Frontend • Backend • REST APIs • Databases • Testing • Automation
+            </p>
+          </div>
+
+          <div class="glass-card p-5 sm:p-6">
+            <div class="flex items-center gap-2 mb-2.5">
+              <span class="text-xl">🤖</span>
+              <h3 class="font-outfit font-bold text-sm text-white">AI / GenAI</h3>
+            </div>
+            <p class="text-[11px] text-slate-300 leading-relaxed font-mono">
+              LLMs • RAG • AI Agents • LangChain • Semantic Search • NLP
+            </p>
+          </div>
+
+          <div class="glass-card p-5 sm:p-6">
+            <div class="flex items-center gap-2 mb-2.5">
+              <span class="text-xl">📊</span>
+              <h3 class="font-outfit font-bold text-sm text-white">Data &amp; ML</h3>
+            </div>
+            <p class="text-[11px] text-slate-300 leading-relaxed font-mono">
+              Machine Learning • Deep Learning • Computer Vision • ETL • Analytics
+            </p>
+          </div>
+
+          <div class="glass-card p-5 sm:p-6">
+            <div class="flex items-center gap-2 mb-2.5">
+              <span class="text-xl">☁️</span>
+              <h3 class="font-outfit font-bold text-sm text-white">Cloud &amp; Deploy</h3>
+            </div>
+            <p class="text-[11px] text-slate-300 leading-relaxed font-mono">
+              Azure • Databricks • Render • Cloudflare Pages • Git/GitHub
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. ABOUT ME & PROFESSIONAL PROFILE ==================== -->
+    <section id="about" class="section-container py-10 relative">
+      <div class="max-w-5xl mx-auto px-5">
+        
+        <div class="section-header text-center mb-6">
+          <span class="section-subtitle text-indigo-400 font-mono text-xs tracking-wider uppercase">01 // Profile</span>
+          <h2 class="section-title font-outfit text-2xl sm:text-3xl font-extrabold text-white mt-1">
+            About Me
+          </h2>
+          <div class="title-bar mx-auto mt-2"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+          
+          <!-- Professional Profile Card -->
+          <div class="md:col-span-5 flex">
+            <div class="glass-card p-6 sm:p-7 w-full flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-3.5 mb-4 pb-3 border-b border-slate-800">
+                  <img src="IMG_20260124_144023.png" alt="Anchal Gupta" class="about-avatar-img" />
+                  <div>
+                    <h3 class="font-outfit font-bold text-lg text-white">Anchal Gupta</h3>
+                    <p class="text-xs font-mono text-cyan-400">Junior Software Engineer</p>
+                    <span class="text-[10px] font-mono text-slate-400 block mt-0.5"><i class="fa-solid fa-location-dot text-indigo-400"></i> Bengaluru, India</span>
+                  </div>
+                </div>
+
+                <div class="space-y-2.5 text-xs font-mono">
+                  <div class="flex justify-between py-1 border-b border-slate-800/60">
+                    <span class="text-slate-400">Current Role:</span>
+                    <span class="text-white font-semibold">Junior Software Engineer</span>
+                  </div>
+                  <div class="flex justify-between py-1 border-b border-slate-800/60">
+                    <span class="text-slate-400">Focus Areas:</span>
+                    <span class="text-indigo-300 font-semibold">Software · AI/ML · Data · GenAI</span>
+                  </div>
+                  <div class="flex justify-between py-1 border-b border-slate-800/60">
+                    <span class="text-slate-400">Education:</span>
+                    <span class="text-slate-200">B.Tech (Hons) CSE (Data Science)</span>
+                  </div>
+                  <div class="flex justify-between py-1 border-b border-slate-800/60">
+                    <span class="text-slate-400">CGPA:</span>
+                    <span class="text-emerald-400 font-bold">8.56 / 10 (Vidyashilp Univ)</span>
+                  </div>
+                  <div class="flex justify-between py-1 border-b border-slate-800/60">
+                    <span class="text-slate-400">Location:</span>
+                    <span class="text-slate-200">Bengaluru, India</span>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <span class="text-slate-400">Open To:</span>
+                    <span class="text-cyan-300">Software · AI/ML · Backend · Full-Stack</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-800 mt-5 flex items-center justify-between">
+                <span class="text-[11px] text-slate-400 font-mono"><i class="fa-solid fa-circle-check text-emerald-400"></i> Verified Profile</span>
+                <a href="#contact" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300">Get in Touch →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- About Me Narrative -->
+          <div class="md:col-span-7 flex">
+            <div class="glass-card p-6 sm:p-8 w-full flex flex-col justify-center">
+              <h3 class="text-lg sm:text-xl font-bold font-outfit text-white mb-3">
+                Turning Problems from Idea to Reliable Working Products
+              </h3>
+              <p class="text-slate-300 leading-relaxed text-xs sm:text-sm mb-3">
+                I'm a Computer Science graduate specializing in Data Science, with hands-on experience across software engineering, artificial intelligence, machine learning, and data engineering.
+              </p>
+              <p class="text-slate-300 leading-relaxed text-xs sm:text-sm mb-3">
+                My software engineering experience includes building backend services, REST APIs, database-driven applications, workflow automation, testing, debugging, and deployed web applications.
+              </p>
+              <p class="text-slate-300 leading-relaxed text-xs sm:text-sm mb-3">
+                I've also worked on machine learning and AI systems involving NLP, computer vision, multimodal learning, Generative AI, RAG, AI agents, semantic retrieval, and LLM applications.
+              </p>
+              <p class="text-slate-300 leading-relaxed text-xs sm:text-sm">
+                I enjoy taking problems from idea to implementation—understanding requirements, designing solutions, writing reliable code, experimenting with models, integrating systems, and deploying working applications.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 4. FEATURED PROJECTS ==================== -->
+    <section id="projects" class="section-container py-12 relative">
+      <div class="max-w-5xl mx-auto px-5">
+        
+        <div class="section-header text-center mb-6">
+          <span class="section-subtitle text-yellow-400 font-mono text-xs tracking-wider uppercase">02 // Technical Implementations</span>
+          <h2 class="section-title font-outfit text-2xl sm:text-3xl font-extrabold text-white mt-1">
+            Featured Projects ⭐
+          </h2>
+          <div class="title-bar mx-auto mt-2"></div>
+        </div>
+
+        <!-- Filter Controls & Search -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 mb-6">
+          <div class="project-filter-tabs flex flex-wrap justify-center gap-1.5">
+            <button class="filter-btn active" data-filter="all">All Projects (8)</button>
+            <button class="filter-btn filter-ai" data-filter="ai">🤖 AI / GenAI (4)</button>
+            <button class="filter-btn filter-sw" data-filter="software">💻 Software Engineering (3)</button>
+            <button class="filter-btn filter-data" data-filter="data">📊 Data / ML (2)</button>
+          </div>
+
+          <div class="relative w-full sm:w-56">
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
+            <input type="text" id="project-search-input" placeholder="Filter projects or tech..." class="search-input" />
+          </div>
+        </div>
+
+        <!-- ================= CATEGORY 1: AI / GENAI ================= -->
+        <div id="ai-projects" class="projects-category-group mb-8 scroll-mt-20" data-category="ai">
+          <div class="category-divider flex items-center gap-3 mb-4">
+            <div class="category-badge bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 px-3 py-1 rounded-lg font-outfit font-bold text-xs flex items-center gap-1.5">
+              🤖 AI &amp; GENERATIVE AI SYSTEMS
+            </div>
+            <div class="flex-1 h-px bg-slate-800"></div>
+          </div>
+
+          <div class="grid grid-cols-1 gap-6">
+            
+            <!-- Project 1: Enterprise AI Research Agent -->
+            <div class="project-card glass-card p-6 sm:p-8" data-category="ai" data-keywords="langchain gemini tavily fastapi streamlit faiss sqlite multi-agent rag autonomous rate limiting">
+              <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="text-xl">🧠</span>
+                    <span class="badge-pill badge-live-pill"><i class="fa-solid fa-circle text-[6px] text-emerald-400"></i> LIVE DEMO</span>
+                    <span class="badge-pill badge-ai">Multi-Agent System</span>
+                    <span class="badge-pill badge-featured">Flagship</span>
+                  </div>
+                  <h3 class="font-outfit text-lg sm:text-xl font-bold text-white">
+                    Enterprise AI Research Agent
+                  </h3>
+                  <p class="text-indigo-300 text-xs mt-0.5">Autonomous Multi-Agent System for Deep Research Synthesis</p>
+                </div>
+                <div class="flex items-center flex-wrap gap-2">
+                  <button class="btn btn-xs btn-glass view-deep-dive-btn" data-project-id="research-agent">
+                    <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
+                  </button>
+                  <a href="https://enterprise-research-agent-nzp42bp4cvdaeaaoybprqi.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live App</a>
+                  <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+              </div>
+
+              <!-- Problem / Solution Structure -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 my-3.5 text-xs">
+                <div class="p-3.5 sm:p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                  <strong class="text-indigo-300 block mb-1.5 font-mono text-[11px] tracking-wide uppercase">Problem:</strong>
+                  <p class="text-slate-300 leading-relaxed">Researching complex topics manually requires searching multiple sources, comparing info, identifying contradictions, and synthesizing findings.</p>
+                </div>
+                <div class="p-3.5 sm:p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                  <strong class="text-cyan-300 block mb-1.5 font-mono text-[11px] tracking-wide uppercase">Solution:</strong>
+                  <p class="text-slate-300 leading-relaxed">Built an autonomous multi-agent research system that decomposes research queries, performs web research via Tavily API, and synthesizes structured reports.</p>
+                </div>
+              </div>
+
+              <div class="architecture-flow p-3 sm:p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 font-mono text-[11px] text-slate-300 mb-4 flex items-center justify-between flex-wrap gap-1.5">
+                <span>User</span> → <span class="text-cyan-400">Streamlit UI</span> → <span class="text-indigo-400">FastAPI Backend</span> → <span class="text-purple-400">Search Agent (Tavily)</span> + <span class="text-emerald-400">FAISS Retrieval</span> → <span class="text-white font-bold">Report Synthesis</span>
+              </div>
+
+              <ul class="highlight-list grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300 mb-4">
+                <li><i class="fa-solid fa-check text-indigo-400 text-[10px]"></i> LLM reasoning breaking complex research into sub-tasks.</li>
+                <li><i class="fa-solid fa-check text-indigo-400 text-[10px]"></i> SQLite-based state tracking &amp; FAISS semantic embeddings.</li>
+                <li><i class="fa-solid fa-check text-indigo-400 text-[10px]"></i> Built resilience mechanisms for API rate limits (exponential backoff &amp; throttling).</li>
+                <li><i class="fa-solid fa-check text-indigo-400 text-[10px]"></i> Deployed live application with memory-optimized processing.</li>
+              </ul>
+
+              <div class="pt-3 border-t border-slate-800/80 flex flex-wrap gap-1.5">
+                <span class="tag tag-indigo">Python</span>
+                <span class="tag tag-indigo">LangChain</span>
+                <span class="tag tag-indigo">Gemini API</span>
+                <span class="tag tag-indigo">Tavily API</span>
+                <span class="tag tag-indigo">FastAPI</span>
+                <span class="tag tag-indigo">Streamlit</span>
+                <span class="tag tag-indigo">FAISS</span>
+                <span class="tag tag-indigo">SQLite</span>
+              </div>
+            </div>
+
+            <!-- Project 2: Customer Support Automation Platform -->
+            <div class="project-card glass-card p-6 sm:p-8" data-category="ai" data-keywords="python fastapi nlp transformers rag sentence-bert faiss support classification 10k tickets">
+              <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="text-xl">💬</span>
+                    <span class="badge-pill badge-ai">RAG &amp; Transformers</span>
+                    <span class="metric-badge">10K+ Support Tickets</span>
+                  </div>
+                  <h3 class="font-outfit text-lg sm:text-xl font-bold text-white">
+                    Customer Support Automation Platform
+                  </h3>
+                  <p class="text-indigo-300 text-xs mt-0.5">RAG-Powered Intelligent Ticket Classification &amp; Resolution</p>
+                </div>
+                <div class="flex items-center flex-wrap gap-2">
+                  <button class="btn btn-xs btn-glass view-deep-dive-btn" data-project-id="support-rag">
+                    <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
+                  </button>
+                  <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                Built an enterprise AI support automation platform processing 10K+ tickets with multi-task transformers (NER, classification, summarization) and a grounded RAG retrieval pipeline with Sentence-BERT embeddings &amp; FAISS vector search.
+              </p>
+
+              <ul class="highlight-list grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-slate-300 mb-3">
+                <li><i class="fa-solid fa-check text-indigo-400 text-[10px]"></i> Multi-task transformer classification, NER &amp; contextual summarization.</li>
+                <li><i class="fa-solid fa-check text-indigo-400 text-[10px]"></i> Sub-millisecond historical resolution retrieval using FAISS.</li>
+                <li><i class="fa-solid fa-check text-indigo-400 text-[10px]"></i> RAG evaluation for grounding, ranking, and answer hallucination prevention.</li>
+                <li><i class="fa-solid fa-check text-indigo-400 text-[10px]"></i> Streamlit analytics dashboard tracking 10+ operational support KPIs.</li>
+              </ul>
+
+              <div class="pt-3 border-t border-slate-800/80 flex flex-wrap gap-1.5">
+                <span class="tag tag-indigo">Python</span>
+                <span class="tag tag-indigo">FastAPI</span>
+                <span class="tag tag-indigo">RAG</span>
+                <span class="tag tag-indigo">Sentence-BERT</span>
+                <span class="tag tag-indigo">FAISS</span>
+                <span class="tag tag-indigo">Transformers</span>
+                <span class="tag tag-indigo">Streamlit</span>
+              </div>
+            </div>
+
+            <!-- Project 3: Indian Deepfake Human Face Detection -->
+            <div class="project-card glass-card p-6 sm:p-8" data-category="ai" data-keywords="deepfake computer vision mtcnn yolov11 cnn xceptionnet71 stable diffusion 140k dataset">
+              <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="text-xl">🛡️</span>
+                    <span class="badge-pill badge-ai">Computer Vision &amp; Deep Learning</span>
+                    <span class="metric-badge">99.96% Accuracy · 100% TNR</span>
+                  </div>
+                  <h3 class="font-outfit text-lg sm:text-xl font-bold text-white">
+                    Indian Deepfake Human Face Detection
+                  </h3>
+                  <p class="text-indigo-300 text-xs mt-0.5">High-Precision Deep Learning Classifier on 140K+ Synthetic Images</p>
+                </div>
+                <div class="flex items-center flex-wrap gap-2">
+                  <button class="btn btn-xs btn-glass view-deep-dive-btn" data-project-id="deepfake-detection">
+                    <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
+                  </button>
+                  <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                Engineered a robust deepfake detection pipeline curated on 140K+ Indian face images generated with Stable Diffusion, using MTCNN, YOLOv11 for facial feature extraction, and benchmarked across Custom CNNs &amp; XceptionNet71 architectures.
+              </p>
+
+              <div class="pt-3 border-t border-slate-800/80 flex flex-wrap gap-1.5">
+                <span class="tag tag-indigo">Python</span>
+                <span class="tag tag-indigo">YOLOv11</span>
+                <span class="tag tag-indigo">MTCNN</span>
+                <span class="tag tag-indigo">XceptionNet71</span>
+                <span class="tag tag-indigo">CNN</span>
+                <span class="tag tag-indigo">Computer Vision</span>
+              </div>
+            </div>
+
+            <!-- Project 4: Crowd Behavior Analysis -->
+            <div class="project-card glass-card p-6 sm:p-8" data-category="ai" data-keywords="crowd behavior yolo resnet-50 lstm gan vae anomaly detection forecasting">
+              <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="text-xl">👁️</span>
+                    <span class="badge-pill badge-ai">Computer Vision &amp; Simulation</span>
+                    <span class="metric-badge">+20–25% Accuracy</span>
+                  </div>
+                  <h3 class="font-outfit text-lg sm:text-xl font-bold text-white">
+                    Crowd Behavior Analysis &amp; Forecasting
+                  </h3>
+                  <p class="text-indigo-300 text-xs mt-0.5">Spatio-Temporal Crowd Detection, Anomaly Tracking &amp; GAN Simulation</p>
+                </div>
+                <div class="flex items-center flex-wrap gap-2">
+                  <button class="btn btn-xs btn-glass view-deep-dive-btn" data-project-id="crowd-forecasting">
+                    <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
+                  </button>
+                  <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                Deep learning framework utilizing YOLO and ResNet-50 for dense crowd detection, LSTM models for temporal movement forecasting, and Conditional GANs for behavioral simulation under stress conditions.
+              </p>
+
+              <div class="pt-3 border-t border-slate-800/80 flex flex-wrap gap-1.5">
+                <span class="tag tag-indigo">Python</span>
+                <span class="tag tag-indigo">YOLO</span>
+                <span class="tag tag-indigo">ResNet-50</span>
+                <span class="tag tag-indigo">LSTM</span>
+                <span class="tag tag-indigo">Conditional GAN</span>
+                <span class="tag tag-indigo">Deep Learning</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ================= CATEGORY 2: SOFTWARE ENGINEERING ================= -->
+        <div id="software-projects" class="projects-category-group mb-8 scroll-mt-20" data-category="software">
+          <div class="category-divider flex items-center gap-3 mb-4">
+            <div class="category-badge bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 px-3 py-1 rounded-lg font-outfit font-bold text-xs flex items-center gap-1.5">
+              💻 SOFTWARE ENGINEERING &amp; BACKEND ARCHITECTURES
+            </div>
+            <div class="flex-1 h-px bg-slate-800"></div>
+          </div>
+
+          <div class="grid grid-cols-1 gap-6">
+            
+            <!-- Project 5: Healthcare Information Management Platform -->
+            <div class="project-card glass-card p-6 sm:p-8" data-category="software" data-keywords="python fastapi postgresql rest apis ocr pytest playwright healthcare ehr backend">
+              <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="text-xl">🏥</span>
+                    <span class="badge-pill badge-sw">Full-Stack &amp; OCR</span>
+                    <span class="badge-pill badge-featured">Enterprise Backend</span>
+                  </div>
+                  <h3 class="font-outfit text-lg sm:text-xl font-bold text-white">
+                    Healthcare Information Management Platform
+                  </h3>
+                  <p class="text-cyan-300 text-xs mt-0.5">Digital Healthcare &amp; Electronic Health Record (EHR) Backend</p>
+                </div>
+                <div class="flex items-center flex-wrap gap-2">
+                  <button class="btn btn-xs btn-glass view-deep-dive-btn" data-project-id="healthcare-ehr">
+                    <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
+                  </button>
+                  <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+              </div>
+
+              <div class="architecture-flow p-3 sm:p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 font-mono text-[11px] text-slate-300 my-3.5 flex items-center justify-between flex-wrap gap-1.5">
+                <span>Medical Document</span> → <span class="text-indigo-400">OCR Extraction</span> → <span class="text-cyan-400">FastAPI Services</span> → <span class="text-purple-400">PostgreSQL Schema</span> → <span class="text-emerald-400">EHR Modules</span> → <span class="text-white font-bold">Clinical Users</span>
+              </div>
+
+              <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                Architected robust backend workflows to extract clinical data from medical records via OCR, engineered RESTful APIs for EHR modules, managed relational PostgreSQL schemas, and integrated PyTest &amp; Playwright suites.
+              </p>
+
+              <div class="pt-3 border-t border-slate-800/80 flex flex-wrap gap-1.5">
+                <span class="tag tag-cyan">Python</span>
+                <span class="tag tag-cyan">FastAPI</span>
+                <span class="tag tag-cyan">PostgreSQL</span>
+                <span class="tag tag-cyan">REST APIs</span>
+                <span class="tag tag-cyan">OCR</span>
+                <span class="tag tag-cyan">PyTest</span>
+                <span class="tag tag-cyan">Playwright</span>
+              </div>
+            </div>
+
+            <!-- Project 6: Pavithram Foods -->
+            <div class="project-card glass-card p-6 sm:p-8" data-category="software" data-keywords="next.js javascript typescript wordpress cms cloudflare pages website frontend production">
+              <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="text-xl">🌐</span>
+                    <span class="badge-pill badge-live-pill"><i class="fa-solid fa-circle text-[6px] text-emerald-400"></i> LIVE WEBSITE</span>
+                    <span class="badge-pill badge-sw">Full-Stack &amp; CMS</span>
+                  </div>
+                  <h3 class="font-outfit text-lg sm:text-xl font-bold text-white">
+                    Pavithram Foods — Official Business Website
+                  </h3>
+                  <p class="text-cyan-300 text-xs mt-0.5">Production Commercial Website &amp; Headless CMS</p>
+                </div>
+                <div class="flex items-center flex-wrap gap-2">
+                  <button class="btn btn-xs btn-glass view-deep-dive-btn" data-project-id="pavithram-foods">
+                    <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
+                  </button>
+                  <a href="https://www.pavithramfoods.com/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-primary"><i class="fa-solid fa-globe"></i> Visit Website</a>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                Developed and deployed the official commercial website for a real business using Next.js and headless WordPress CMS. Configured Cloudflare Pages CDN, SSL certificates, and edge caching for optimal performance and independent marketing team updates.
+              </p>
+
+              <div class="pt-3 border-t border-slate-800/80 flex flex-wrap gap-1.5">
+                <span class="tag tag-cyan">Next.js</span>
+                <span class="tag tag-cyan">TypeScript</span>
+                <span class="tag tag-cyan">WordPress CMS</span>
+                <span class="tag tag-cyan">Cloudflare Pages</span>
+              </div>
+            </div>
+
+            <!-- Project 7: Amivya Health -->
+            <div class="project-card glass-card p-6 sm:p-8" data-category="software" data-keywords="amivya health healthcare platform react next.js rest api frontend whatsapp bot ehr">
+              <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="text-xl">🏥</span>
+                    <span class="badge-pill badge-live-pill"><i class="fa-solid fa-circle text-[6px] text-emerald-400"></i> LIVE PLATFORM</span>
+                    <span class="badge-pill badge-sw">Healthcare Tech</span>
+                  </div>
+                  <h3 class="font-outfit text-lg sm:text-xl font-bold text-white">
+                    Amivya Health
+                  </h3>
+                  <p class="text-cyan-300 text-xs mt-0.5">Healthcare Technology Web Platform &amp; WhatsApp Bot Engine</p>
+                </div>
+                <div class="flex items-center flex-wrap gap-2">
+                  <button class="btn btn-xs btn-glass view-deep-dive-btn" data-project-id="amivya-health">
+                    <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
+                  </button>
+                  <a href="#contact" class="btn btn-xs btn-glass"><i class="fa-solid fa-arrow-up-right-from-square"></i> Case Study</a>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                Contributed to the development of a live healthcare technology platform, focusing on frontend application interfaces, API module integrations, and reliable clinical user workflows.
+              </p>
+
+              <div class="pt-3 border-t border-slate-800/80 flex flex-wrap gap-1.5">
+                <span class="tag tag-cyan">React</span>
+                <span class="tag tag-cyan">TypeScript</span>
+                <span class="tag tag-cyan">REST APIs</span>
+                <span class="tag tag-cyan">UI Engineering</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ================= CATEGORY 3: DATA / DATA ENGINEERING ================= -->
+        <div id="data-projects" class="projects-category-group scroll-mt-20" data-category="data">
+          <div class="category-divider flex items-center gap-3 mb-4">
+            <div class="category-badge bg-purple-500/10 border border-purple-500/30 text-purple-400 px-3 py-1 rounded-lg font-outfit font-bold text-xs flex items-center gap-1.5">
+              📊 DATA &amp; DATA ENGINEERING SYSTEMS
+            </div>
+            <div class="flex-1 h-px bg-slate-800"></div>
+          </div>
+
+          <div class="grid grid-cols-1 gap-6">
+            
+            <!-- Project 8: Enterprise ETL Data Warehouse -->
+            <div class="project-card glass-card p-6 sm:p-8" data-category="data" data-keywords="azure data factory databricks sql etl power bi data warehouse 1m records tata trent">
+              <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="text-xl">🗄️</span>
+                    <span class="badge-pill badge-data">Cloud Data Engineering</span>
+                    <span class="metric-badge">1M+ Records · 30% Acceleration</span>
+                  </div>
+                  <h3 class="font-outfit text-lg sm:text-xl font-bold text-white">
+                    Enterprise ETL Data Warehouse
+                  </h3>
+                  <p class="text-purple-300 text-xs mt-0.5">Automated Cloud Data Ingestion &amp; Executive Reporting</p>
+                </div>
+                <div class="flex items-center flex-wrap gap-2">
+                  <button class="btn btn-xs btn-glass view-deep-dive-btn" data-project-id="etl-warehouse">
+                    <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
+                  </button>
+                  <a href="#contact" class="btn btn-xs btn-glass"><i class="fa-solid fa-database"></i> Architecture</a>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                Engineered automated ETL data ingestion pipelines using Azure Data Factory and Databricks to process 1M+ enterprise records into Azure SQL data warehouse, coupled with Power BI analytics dashboards cutting processing time by 30%.
+              </p>
+
+              <div class="pt-3 border-t border-slate-800/80 flex flex-wrap gap-1.5">
+                <span class="tag tag-purple">Azure Data Factory</span>
+                <span class="tag tag-purple">Databricks</span>
+                <span class="tag tag-purple">Azure SQL</span>
+                <span class="tag tag-purple">ETL / ELT</span>
+                <span class="tag tag-purple">Power BI</span>
+                <span class="tag tag-purple">Data Warehousing</span>
+              </div>
+            </div>
+
+            <!-- Project 9: AI Resume Analyzer & Screening System -->
+            <div class="project-card glass-card p-6 sm:p-8" data-category="data" data-keywords="resume analyzer nlp python google drive api automation parsing 500+ resumes">
+              <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="text-xl">📄</span>
+                    <span class="badge-pill badge-data">AI &amp; Automation</span>
+                    <span class="metric-badge">40–50% Eval Reduction</span>
+                  </div>
+                  <h3 class="font-outfit text-lg sm:text-xl font-bold text-white">
+                    AI Resume Analyzer &amp; Screening System
+                  </h3>
+                  <p class="text-purple-300 text-xs mt-0.5">Automated Resume Parsing &amp; Candidate Evaluation Pipeline</p>
+                </div>
+                <div class="flex items-center flex-wrap gap-2">
+                  <button class="btn btn-xs btn-glass view-deep-dive-btn" data-project-id="resume-analyzer">
+                    <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
+                  </button>
+                  <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                AI-powered resume analysis system processing 500+ resumes with Google Drive API integration, extracting structured skills, parsing qualifications, and reducing manual evaluation turnaround by 40–50%.
+              </p>
+
+              <div class="pt-3 border-t border-slate-800/80 flex flex-wrap gap-1.5">
+                <span class="tag tag-purple">Python</span>
+                <span class="tag tag-purple">NLP</span>
+                <span class="tag tag-purple">Google Drive API</span>
+                <span class="tag tag-purple">FastAPI</span>
+                <span class="tag tag-purple">Automation</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    </section>
+
+    <!-- ==================== 5. PROFESSIONAL EXPERIENCE ==================== -->
+    <section id="experience" class="section-container py-12 relative bg-slate-950/40">
+      <div class="max-w-4xl mx-auto px-5">
+        
+        <div class="section-header text-center mb-8">
+          <span class="section-subtitle text-indigo-400 font-mono text-xs tracking-wider uppercase">03 // Professional History</span>
+          <h2 class="section-title font-outfit text-2xl sm:text-3xl font-extrabold text-white mt-1">
+            Experience 💼
+          </h2>
+          <div class="title-bar mx-auto mt-2"></div>
+        </div>
+
+        <div class="timeline-container relative pl-6">
+          <div class="timeline-line"></div>
+
+          <!-- Company 1: GRX10 Solutions (Progression from Intern to Junior Software Engineer) -->
+          <div class="timeline-item mb-8 relative" data-category="software">
+            <div class="timeline-node node-cyan"><i class="fa-solid fa-code text-[10px]"></i></div>
+            <div class="glass-card p-6 sm:p-7">
+              <div class="flex flex-wrap items-start justify-between gap-1 mb-2">
+                <div>
+                  <span class="role-badge badge-sw">Software Engineering</span>
+                  <h3 class="font-outfit text-base sm:text-lg font-bold text-white mt-0.5">
+                    Junior Software Engineer
+                  </h3>
+                  <h4 class="text-xs text-cyan-400 font-medium">GRX10 Solutions Pvt. Ltd.</h4>
+                </div>
+                <div class="text-right font-mono text-[11px]">
+                  <span class="bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 px-2.5 py-0.5 rounded-full block">Jul 2026 – Present</span>
+                  <span class="text-slate-400 text-[10px] block mt-0.5">Previously Developer Intern (Jan – Jun 2026)</span>
+                </div>
+              </div>
+
+              <p class="text-slate-300 text-xs mb-3">
+                Working on enterprise business applications involving React frontend development, FastAPI backend services, PostgreSQL database design, 3rd-party API integrations, and workflow automation.
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300 mb-3 font-mono">
+                <div class="p-2 rounded bg-slate-900/50"><strong>1. Backend APIs:</strong> FastAPI + PostgreSQL services</div>
+                <div class="p-2 rounded bg-slate-900/50"><strong>2. Workflow Automation:</strong> Low-code Flow Builder</div>
+                <div class="p-2 rounded bg-slate-900/50"><strong>3. Integrations:</strong> WhatsApp Business &amp; Azure APIs</div>
+                <div class="p-2 rounded bg-slate-900/50"><strong>4. Testing &amp; QA:</strong> PyTest + Playwright e2e</div>
+              </div>
+
+              <div class="flex flex-wrap gap-1.5">
+                <span class="tag tag-cyan">React</span><span class="tag tag-cyan">TypeScript</span><span class="tag tag-cyan">FastAPI</span><span class="tag tag-cyan">PostgreSQL</span><span class="tag tag-cyan">REST APIs</span><span class="tag tag-cyan">Automation</span><span class="tag tag-cyan">Testing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Company 2: UST Global -->
+          <div class="timeline-item mb-8 relative" data-category="ai">
+            <div class="timeline-node node-indigo"><i class="fa-solid fa-brain text-[10px]"></i></div>
+            <div class="glass-card p-6 sm:p-7">
+              <div class="flex flex-wrap items-start justify-between gap-1 mb-2">
+                <div>
+                  <span class="role-badge badge-ai">AI / ML Research</span>
+                  <h3 class="font-outfit text-base sm:text-lg font-bold text-white mt-0.5">AI/ML Research Intern</h3>
+                  <h4 class="text-xs text-indigo-400 font-medium">UST Global</h4>
+                </div>
+                <span class="date-badge font-mono text-[11px] bg-slate-900 text-slate-300 px-2.5 py-1 rounded-full border border-slate-800">
+                  Jun 2025 – Jul 2025
+                </span>
+              </div>
+
+              <p class="text-slate-300 text-xs mb-3">Spearheaded AI/ML research involving multimodal deep learning architectures and explainable AI.</p>
+
+              <ul class="highlight-list space-y-1 text-xs text-slate-300 mb-3">
+                <li><i class="fa-solid fa-chevron-right text-indigo-400 text-[9px]"></i> Researched multimodal emotion recognition fusing text, audio, and video modalities.</li>
+                <li><i class="fa-solid fa-chevron-right text-indigo-400 text-[9px]"></i> Developed autism screening workflow combining questionnaire inputs with deep neural models.</li>
+                <li><i class="fa-solid fa-chevron-right text-indigo-400 text-[9px]"></i> Applied Explainable AI (XAI) techniques for clinical interpretability and validation.</li>
+              </ul>
+
+              <div class="flex flex-wrap gap-1.5">
+                <span class="tag tag-indigo">Python</span><span class="tag tag-indigo">Deep Learning</span><span class="tag tag-indigo">Multimodal AI</span><span class="tag tag-indigo">XAI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Company 3: Tata Trent Limited -->
+          <div class="timeline-item mb-8 relative" data-category="data">
+            <div class="timeline-node node-purple"><i class="fa-solid fa-database text-[10px]"></i></div>
+            <div class="glass-card p-6 sm:p-7">
+              <div class="flex flex-wrap items-start justify-between gap-1 mb-2">
+                <div>
+                  <span class="role-badge badge-data">IT / Data Engineering</span>
+                  <h3 class="font-outfit text-base sm:text-lg font-bold text-white mt-0.5">IT / Data Engineering Intern</h3>
+                  <h4 class="text-xs text-purple-400 font-medium">Tata Trent Limited (TATA Group)</h4>
+                </div>
+                <span class="date-badge font-mono text-[11px] bg-slate-900 text-slate-300 px-2.5 py-1 rounded-full border border-slate-800">
+                  May 2024 – Jul 2024
+                </span>
+              </div>
+
+              <p class="text-slate-300 text-xs mb-3">Spearheaded enterprise data migration, automated ETL pipelines, and executive BI analytics.</p>
+
+              <ul class="highlight-list space-y-1 text-xs text-slate-300 mb-3">
+                <li><i class="fa-solid fa-chevron-right text-purple-400 text-[9px]"></i> Migrated enterprise dataset schemas securely to Azure SQL database clusters.</li>
+                <li><i class="fa-solid fa-chevron-right text-purple-400 text-[9px]"></i> Built automated ETL data pipelines using Azure Data Factory.</li>
+                <li><i class="fa-solid fa-chevron-right text-purple-400 text-[9px]"></i> Developed executive Power BI dashboards that cut business reporting time by ~30%.</li>
+              </ul>
+
+              <div class="flex flex-wrap gap-1.5">
+                <span class="tag tag-purple">Azure SQL</span><span class="tag tag-purple">Azure Data Factory</span><span class="tag tag-purple">ETL</span><span class="tag tag-purple">Power BI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leadership & Community Callout -->
+          <div class="timeline-item relative">
+            <div class="timeline-node" style="border-color:#10b981;color:#10b981;"><i class="fa-solid fa-hands-holding-child text-[10px]"></i></div>
+            <div class="glass-card p-5 sm:p-6">
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-xs font-bold text-white font-outfit">Leadership &amp; Community — Paryatan School</span>
+                <span class="text-[10px] font-mono text-emerald-400">Social Work Intern</span>
+              </div>
+              <p class="text-[11px] text-slate-400">Taught and mentored 30+ underprivileged students across 20+ dedicated academic sessions.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 6. MASTER TECHNICAL SKILLS MATRIX ==================== -->
+    <section id="skills" class="section-container py-12 relative">
+      <div class="max-w-5xl mx-auto px-5">
+        
+        <div class="section-header text-center mb-8">
+          <span class="section-subtitle text-cyan-400 font-mono text-xs tracking-wider uppercase">04 // Master Toolkit</span>
+          <h2 class="section-title font-outfit text-2xl sm:text-3xl font-extrabold text-white mt-1">
+            Technical Skills
+          </h2>
+          <div class="title-bar mx-auto mt-2"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          
+          <!-- Programming -->
+          <div class="glass-card p-5 sm:p-6">
+            <div class="flex items-center gap-2 mb-2.5 pb-2 border-b border-slate-800">
+              <span class="text-lg">⌨️</span>
+              <h3 class="font-outfit font-bold text-sm text-white">Programming Languages</h3>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="skill-chip">Python</span><span class="skill-chip">SQL</span><span class="skill-chip">Java</span><span class="skill-chip">JavaScript</span><span class="skill-chip">TypeScript</span>
+            </div>
+          </div>
+
+          <!-- Software Engineering -->
+          <div class="glass-card p-5 sm:p-6">
+            <div class="flex items-center gap-2 mb-2.5 pb-2 border-b border-slate-800">
+              <span class="text-lg">💻</span>
+              <h3 class="font-outfit font-bold text-sm text-white">Software Engineering</h3>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="skill-chip">React</span><span class="skill-chip">Next.js</span><span class="skill-chip">FastAPI</span><span class="skill-chip">Flask</span><span class="skill-chip">Node.js</span><span class="skill-chip">REST APIs</span>
+            </div>
+          </div>
+
+          <!-- AI / ML -->
+          <div class="glass-card p-5 sm:p-6">
+            <div class="flex items-center gap-2 mb-2.5 pb-2 border-b border-slate-800">
+              <span class="text-lg">🤖</span>
+              <h3 class="font-outfit font-bold text-sm text-white">AI / Machine Learning</h3>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="skill-chip">Machine Learning</span><span class="skill-chip">Deep Learning</span><span class="skill-chip">NLP</span><span class="skill-chip">Transformers</span><span class="skill-chip">Computer Vision</span><span class="skill-chip">Multimodal AI</span><span class="skill-chip">XAI</span>
+            </div>
+          </div>
+
+          <!-- Generative AI -->
+          <div class="glass-card p-5 sm:p-6">
+            <div class="flex items-center gap-2 mb-2.5 pb-2 border-b border-slate-800">
+              <span class="text-lg">🧠</span>
+              <h3 class="font-outfit font-bold text-sm text-white">Generative AI &amp; LLMs</h3>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="skill-chip">LLMs</span><span class="skill-chip">RAG</span><span class="skill-chip">LangChain</span><span class="skill-chip">AI Agents</span><span class="skill-chip">Multi-Agent Systems</span><span class="skill-chip">Gemini API</span><span class="skill-chip">Prompt Engineering</span><span class="skill-chip">Semantic Search</span>
+            </div>
+          </div>
+
+          <!-- Data -->
+          <div class="glass-card p-5 sm:p-6">
+            <div class="flex items-center gap-2 mb-2.5 pb-2 border-b border-slate-800">
+              <span class="text-lg">🗄️</span>
+              <h3 class="font-outfit font-bold text-sm text-white">Data &amp; Databases</h3>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="skill-chip">PostgreSQL</span><span class="skill-chip">SQLite</span><span class="skill-chip">Azure SQL</span><span class="skill-chip">Azure Data Factory</span><span class="skill-chip">Databricks</span><span class="skill-chip">ETL / ELT</span><span class="skill-chip">Data Warehousing</span><span class="skill-chip">Power BI</span>
+            </div>
+          </div>
+
+          <!-- Testing & Cloud -->
+          <div class="glass-card p-5 sm:p-6">
+            <div class="flex items-center gap-2 mb-2.5 pb-2 border-b border-slate-800">
+              <span class="text-lg">⚙️</span>
+              <h3 class="font-outfit font-bold text-sm text-white">Testing &amp; Deployment</h3>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="skill-chip">Git</span><span class="skill-chip">GitHub</span><span class="skill-chip">PyTest</span><span class="skill-chip">Playwright</span><span class="skill-chip">JIRA</span><span class="skill-chip">Agile/Scrum</span><span class="skill-chip">Cloudflare Pages</span><span class="skill-chip">Render</span><span class="skill-chip">Vercel</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 7. ACHIEVEMENTS & PROGRAMS ==================== -->
+    <section id="achievements" class="section-container py-12 relative bg-slate-950/40">
+      <div class="max-w-5xl mx-auto px-5">
+        
+        <div class="section-header text-center mb-8">
+          <span class="section-subtitle text-yellow-400 font-mono text-xs tracking-wider uppercase">05 // Recognition</span>
+          <h2 class="section-title font-outfit text-2xl sm:text-3xl font-extrabold text-white mt-1">
+            Achievements &amp; Programs 🏆
+          </h2>
+          <div class="title-bar mx-auto mt-2"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+          <div class="glass-card p-5">
+            <div class="text-2xl mb-1">🥇</div>
+            <span class="badge-pill bg-yellow-500/10 text-yellow-400 border border-yellow-500/30 text-[10px]">1st Position Winner</span>
+            <h3 class="font-outfit font-bold text-xs sm:text-sm text-white mt-1.5">IEEE Leadership Summit 2024</h3>
+            <p class="text-slate-300 text-[11px] mt-0.5">Idea Pitch Competition Winner.</p>
+          </div>
+
+          <div class="glass-card p-5">
+            <div class="text-2xl mb-1">🥉</div>
+            <span class="badge-pill bg-amber-500/10 text-amber-400 border border-amber-500/30 text-[10px]">3rd Position</span>
+            <h3 class="font-outfit font-bold text-xs sm:text-sm text-white mt-1.5">CodeO Competition</h3>
+            <p class="text-slate-300 text-[11px] mt-0.5">Algorithmic coding competition.</p>
+          </div>
+
+          <div class="glass-card p-5">
+            <div class="text-2xl mb-1">🚀</div>
+            <span class="badge-pill bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 text-[10px]">Round 2 Qualifier</span>
+            <h3 class="font-outfit font-bold text-xs sm:text-sm text-white mt-1.5">EY &amp; ET Hackathons</h3>
+            <p class="text-slate-300 text-[11px] mt-0.5">Advanced to Second Round in both.</p>
+          </div>
+
+          <div class="glass-card p-5">
+            <div class="text-2xl mb-1">🇮🇳</div>
+            <span class="badge-pill bg-purple-500/10 text-purple-400 border border-purple-500/30 text-[10px]">National Qualifier</span>
+            <h3 class="font-outfit font-bold text-xs sm:text-sm text-white mt-1.5">Smart India Hackathon 2025</h3>
+            <p class="text-slate-300 text-[11px] mt-0.5">Grand Finale top team selection.</p>
+          </div>
+        </div>
+
+        <!-- Programs & Scholarships -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+          <div class="glass-card p-5 sm:p-6 border-emerald-500/30">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xl">🎓</span>
+              <h3 class="font-outfit font-bold text-sm text-white">Merit Scholarships</h3>
+            </div>
+            <p class="text-slate-300 text-xs leading-normal mb-1">
+              <strong>Karta Scholar:</strong> 100% competitive merit scholarship award.<br />
+              <strong>Trent Scholar:</strong> Selected for prestigious corporate academic scholarship.
+            </p>
+          </div>
+
+          <div class="glass-card p-5 sm:p-6 border-indigo-500/30">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xl">📚</span>
+              <h3 class="font-outfit font-bold text-sm text-white">Selective Programs</h3>
+            </div>
+            <p class="text-slate-300 text-xs leading-normal mb-1">
+              <strong>McKinsey Forward Program:</strong> Problem solving, communication &amp; digital fluency.<br />
+              <strong>Aspire Leadership Program 2024:</strong> Strategy, leadership &amp; communication.
+            </p>
+          </div>
+        </div>
+
+        <!-- Education Card -->
+        <div class="glass-card p-6 sm:p-7">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <div class="text-2xl">🎓</div>
+              <div>
+                <h3 class="font-outfit text-sm sm:text-base font-bold text-white">Bachelor of Technology (Honours) — CSE (Data Science)</h3>
+                <p class="text-xs text-indigo-300">Vidyashilp University, Bengaluru (2022–2026)</p>
+                <p class="text-[11px] text-slate-400 font-mono">Prior: Jawahar Navodaya Vidyalaya (Class XII - PCM with CS: 80.4%)</p>
+              </div>
+            </div>
+            <div>
+              <span class="text-emerald-400 font-bold font-mono text-sm bg-emerald-500/10 px-3 py-1.5 rounded-lg border border-emerald-500/30">CGPA: 8.56 / 10</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 8. GITHUB & OPEN SOURCE PINNED ==================== -->
+    <section class="section-container py-10 relative">
+      <div class="max-w-5xl mx-auto px-5 text-center">
+        <div class="glass-card p-6 border-slate-800">
+          <i class="fa-brands fa-github text-3xl text-white mb-2"></i>
+          <h3 class="font-outfit text-xl font-bold text-white mb-1">Explore Code &amp; Repositories</h3>
+          <p class="text-slate-400 text-xs max-w-xl mx-auto mb-4">
+            Detailed READMEs, architecture case studies, setup instructions, and clean code for all 8 featured projects.
+          </p>
+          <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            <i class="fa-brands fa-github"></i> Visit GitHub: Anchalgupta1321
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 9. CONTACT SECTION ==================== -->
+    <section id="contact" class="section-container py-12 relative bg-slate-950/60">
+      <div class="max-w-4xl mx-auto px-5">
+        
+        <div class="section-header text-center mb-8">
+          <span class="section-subtitle text-cyan-400 font-mono text-xs tracking-wider uppercase">06 // Connect</span>
+          <h2 class="section-title font-outfit text-2xl sm:text-3xl font-extrabold text-white mt-1">
+            Let's Build Something Meaningful
+          </h2>
+          <div class="title-bar mx-auto mt-2"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3.5 mb-6">
+          <!-- Email Card -->
+          <div class="glass-card p-5 text-center cursor-pointer hover:border-indigo-500/40 transition-colors" id="copy-email-btn" data-email="guptaanchal0321@gmail.com">
+            <i class="fa-solid fa-envelope text-indigo-400 text-xl mb-1"></i>
+            <span class="text-[11px] font-mono text-slate-400 block">Direct Email</span>
+            <span class="text-xs font-semibold text-white block truncate" title="guptaanchal0321@gmail.com">guptaanchal0321@gmail.com</span>
+            <span class="text-[10px] text-indigo-300 font-mono mt-1 inline-block"><i class="fa-regular fa-copy"></i> Click to copy</span>
+          </div>
+
+          <!-- Phone & WhatsApp Card -->
+          <a href="tel:+917807647835" class="glass-card p-5 text-center hover:border-emerald-500/40 transition-colors block">
+            <i class="fa-solid fa-phone text-emerald-400 text-xl mb-1"></i>
+            <span class="text-[11px] font-mono text-slate-400 block">Phone / Mobile</span>
+            <span class="text-xs font-semibold text-white block">+91 7807647835</span>
+            <span class="text-[10px] text-emerald-300 font-mono mt-1 inline-block"><i class="fa-solid fa-phone-volume"></i> Call / WhatsApp</span>
+          </a>
+
+          <!-- LinkedIn Card -->
+          <a href="https://www.linkedin.com/in/anchal-gupta-71436b254/" target="_blank" rel="noopener noreferrer" class="glass-card p-5 text-center hover:border-cyan-500/40 transition-colors">
+            <i class="fa-brands fa-linkedin-in text-cyan-400 text-xl mb-1"></i>
+            <span class="text-[11px] font-mono text-slate-400 block">LinkedIn</span>
+            <span class="text-xs font-semibold text-white block">Anchal Gupta</span>
+            <span class="text-[10px] text-cyan-300 font-mono mt-1 inline-block"><i class="fa-solid fa-arrow-up-right-from-square"></i> Connect profile</span>
+          </a>
+
+          <!-- GitHub Card -->
+          <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="glass-card p-5 text-center hover:border-purple-500/40 transition-colors">
+            <i class="fa-brands fa-github text-purple-400 text-xl mb-1"></i>
+            <span class="text-[11px] font-mono text-slate-400 block">GitHub</span>
+            <span class="text-xs font-semibold text-white block">Anchalgupta1321</span>
+            <span class="text-[10px] text-purple-300 font-mono mt-1 inline-block"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Repos</span>
+          </a>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="glass-card p-6 sm:p-8">
+          <h3 class="font-outfit text-base font-bold text-white mb-1">Send a Direct Message</h3>
+          <p class="text-xs text-slate-400 mb-4">Open a direct conversation regarding roles or projects.</p>
+          
+          <form id="contact-form" class="space-y-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <input type="text" id="user-name" required placeholder="Your Name" class="form-input" />
+              <input type="email" id="user-email" required placeholder="Your Email" class="form-input" />
+            </div>
+            <input type="text" id="user-subject" required placeholder="Role / Topic" class="form-input" />
+            <textarea id="user-message" rows="3" required placeholder="Hi Anchal, I'd like to discuss..." class="form-input"></textarea>
+            <button type="submit" class="btn btn-primary btn-sm w-full justify-center">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== RESUME MODAL WITH ATS 1-PAGE PRINT ENGINE ==================== -->
+  <div id="resume-modal" class="modal-backdrop">
+    <div class="modal-dialog glass-card max-w-3xl w-full p-6 sm:p-8 relative max-h-[88vh] overflow-y-auto">
+      <button id="close-resume-modal" class="modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Modal Header & Print CTA -->
+      <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-800">
+        <div>
+          <h3 class="font-outfit font-black text-2xl text-white">Anchal Gupta</h3>
+          <p class="text-xs font-mono text-cyan-400 font-semibold mt-0.5">Software Engineer | AI/ML &amp; Data</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="print-resume-btn" class="btn btn-sm btn-primary">
+            <i class="fa-solid fa-print"></i>
+            <span>Print / Save PDF (1 Page)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Contact Info Bar -->
+      <div class="flex flex-wrap items-center gap-2 py-3 border-b border-slate-800/80 text-xs font-mono">
+        <span class="resume-contact-link"><i class="fa-solid fa-location-dot text-slate-400"></i> Bengaluru, India</span>
+        <a href="tel:+917807647835" class="resume-contact-link text-emerald-400"><i class="fa-solid fa-phone"></i> +91 7807647835</a>
+        <a href="mailto:guptaanchal0321@gmail.com" class="resume-contact-link text-indigo-300"><i class="fa-solid fa-envelope"></i> guptaanchal0321@gmail.com</a>
+        <a href="https://www.linkedin.com/in/anchal-gupta-71436b254/" target="_blank" rel="noopener noreferrer" class="resume-contact-link text-cyan-300"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="resume-contact-link text-purple-300"><i class="fa-brands fa-github"></i> GitHub</a>
+      </div>
+
+      <!-- Targeted Resume Version Selector -->
+      <div class="resume-track-selector bg-slate-900/80 p-3 rounded-xl border border-slate-800 my-4 flex flex-wrap items-center justify-between gap-2.5">
+        <span class="text-xs font-mono text-slate-300 font-medium">Targeted Track Views:</span>
+        <div class="flex flex-wrap gap-1.5" id="resume-track-buttons">
+          <button class="resume-tab-btn active" data-track="all">📄 Master Profile (All)</button>
+          <button class="resume-tab-btn" data-track="swe">💻 Software Engineer Track</button>
+          <button class="resume-tab-btn" data-track="aiml">🤖 AI/ML &amp; Data Track</button>
+        </div>
+      </div>
+
+      <!-- Printable Resume Sheet Body -->
+      <div id="resume-printable-content" class="resume-printable-sheet py-2 space-y-4 text-xs">
+        
+        <!-- Summary -->
+        <div>
+          <h4 class="font-outfit font-bold text-white text-xs tracking-wider uppercase mb-1.5 text-cyan-400">Professional Summary</h4>
+          <p class="leading-relaxed text-slate-300 text-[11.5px]" id="resume-summary-text">
+            Computer Science graduate specializing in Data Science with comprehensive hands-on experience across software engineering, artificial intelligence, machine learning, and data engineering. Progressed to Junior Software Engineer at GRX10 Solutions after developer internship, with AI research internship at UST Global and cloud data engineering internship at Tata Trent Limited.
+          </p>
+        </div>
+
+        <!-- Work Experience -->
+        <div>
+          <h4 class="font-outfit font-bold text-white text-xs tracking-wider uppercase mb-2 text-cyan-400">Work Experience</h4>
+          
+          <div class="mb-3.5 space-y-1">
+            <div class="flex justify-between items-baseline font-bold text-white">
+              <span>Junior Software Engineer — GRX10 Solutions Pvt. Ltd.</span>
+              <span class="font-mono text-cyan-400 text-[11px]">Jul 2026 – Present</span>
+            </div>
+            <p class="text-slate-300 text-[11px] leading-relaxed">
+              • Engineered modular full-stack architectures, low-code automation workflows, and RESTful APIs using FastAPI, React, TypeScript, and PostgreSQL.<br />
+              • Integrated WhatsApp Meta Graph APIs &amp; Azure microservices; established automated end-to-end integration testing suites with PyTest &amp; Playwright.
+            </p>
+          </div>
+
+          <div class="mb-3.5 space-y-1">
+            <div class="flex justify-between items-baseline font-bold text-white">
+              <span>AI/ML Research Intern — UST Global</span>
+              <span class="font-mono text-indigo-400 text-[11px]">Jun 2025 – Jul 2025</span>
+            </div>
+            <p class="text-slate-300 text-[11px] leading-relaxed">
+              • Developed multimodal emotion recognition pipelines combining textual sentiment, speech acoustic features, and facial expression analysis.<br />
+              • Researched automated autism screening workflows and implemented Explainable AI (XAI) feature attribution for clinical explainability.
+            </p>
+          </div>
+
+          <div class="space-y-1">
+            <div class="flex justify-between items-baseline font-bold text-white">
+              <span>IT / Data Engineering Intern — Tata Trent Limited (TATA Group)</span>
+              <span class="font-mono text-purple-400 text-[11px]">May 2024 – Jul 2024</span>
+            </div>
+            <p class="text-slate-300 text-[11px] leading-relaxed">
+              • Orchestrated automated ETL pipelines using Azure Data Factory and Databricks PySpark; performed enterprise database migration to Azure SQL.<br />
+              • Built executive Power BI dashboards with star-schema models, accelerating inventory &amp; sales reporting turnaround by ~30%.
+            </p>
+          </div>
+        </div>
+
+        <!-- Key Projects -->
+        <div>
+          <h4 class="font-outfit font-bold text-white text-xs tracking-wider uppercase mb-2 text-cyan-400">Featured Technical Projects</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-[11px]">
+            <div class="p-2.5 rounded-lg bg-slate-900/50 border border-slate-800/80">
+              <strong class="text-white block">Enterprise AI Research Agent</strong>
+              <span class="text-slate-400">Autonomous multi-agent synthesis system using LangChain, Gemini API, Tavily &amp; FAISS (< 4.2s latency).</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900/50 border border-slate-800/80">
+              <strong class="text-white block">Customer Support Automation Platform</strong>
+              <span class="text-slate-400">RAG pipeline with Sentence-BERT &amp; FAISS on 10K+ support tickets with multi-task NLP categorization.</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900/50 border border-slate-800/80">
+              <strong class="text-white block">Indian Deepfake Face Detection (99.96% Acc)</strong>
+              <span class="text-slate-400">Deep learning CNN &amp; XceptionNet71 classifier evaluated across 140K+ synthetic images with 100% TNR.</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900/50 border border-slate-800/80">
+              <strong class="text-white block">Pavithram Foods Production Website</strong>
+              <span class="text-slate-400">Live Next.js commercial platform with headless WordPress CMS, Cloudflare edge caching, and 100 Lighthouse score.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div>
+          <h4 class="font-outfit font-bold text-white text-xs tracking-wider uppercase mb-1.5 text-cyan-400">Technical Skills</h4>
+          <p class="text-[11px] text-slate-300 leading-relaxed font-mono">
+            <strong>Languages &amp; Core:</strong> Python, JavaScript, TypeScript, SQL, HTML/CSS, PySpark<br />
+            <strong>Frameworks &amp; Backend:</strong> FastAPI, React, Next.js, Django, Node.js, REST APIs, Tailwind CSS<br />
+            <strong>AI/ML &amp; Data:</strong> LangChain, RAG, FAISS, Sentence-BERT, Gemini API, OpenCV, YOLOv11, PyTorch, Azure Data Factory, Power BI<br />
+            <strong>Databases &amp; DevOps:</strong> PostgreSQL, MySQL, SQLite, Docker, Git/GitHub, Cloudflare Pages, PyTest, Playwright
+          </p>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <h4 class="font-outfit font-bold text-white text-xs tracking-wider uppercase mb-1 text-cyan-400">Education &amp; Credentials</h4>
+          <div class="flex justify-between items-baseline text-[11px]">
+            <span><strong>B.Tech (Honours) CSE (Data Science)</strong> — Vidyashilp University, Bengaluru</span>
+            <span class="font-mono text-emerald-400 font-bold">CGPA: 8.56 / 10 (2022–2026)</span>
+          </div>
+          <p class="text-slate-400 text-[10px] mt-0.5">Honors &amp; Awards: 1st Place IEEE Idea Pitch Contest • Global Mentorship Program Mentee (Women Who Code)</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PROJECT TECHNICAL DEEP DIVE MODAL ==================== -->
+  <div id="project-deep-dive-modal" class="modal-backdrop">
+    <div class="deep-dive-dialog glass-card relative">
+      <button id="close-deep-dive-modal" class="modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div id="deep-dive-modal-content">
+        <!-- Content injected dynamically via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-900 bg-slate-950 py-6 relative z-10">
+    <div class="max-w-5xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+      <div class="flex items-center gap-2 font-outfit font-bold text-white">
+        <span class="logo-badge" style="width:28px;height:28px;font-size:0.75rem;">AG</span> Anchal Gupta
+      </div>
+      <p class="font-mono text-[11px]">Software Engineer | AI/ML &amp; Data · &copy; 2026</p>
+      <a href="#home" class="scroll-top-btn" style="width:32px;height:32px;font-size:0.75rem;" title="Top"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="toast-notification">
+    <i class="fa-solid fa-circle-check text-emerald-400"></i>
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button id="floating-back-to-top" class="floating-back-to-top" aria-label="Scroll to top of page" title="Scroll to top">
+    <i class="fa-solid fa-arrow-up text-sm"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
