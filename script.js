@@ -1076,3 +1076,137 @@ function initSmoothScrollAndBackToTop() {
   });
 }
 
+/* ==========================================================================
+   15. TOAST NOTIFICATION SYSTEM
+   ========================================================================== */
+function showToast(message, isSuccess = true) {
+  const toast = document.getElementById('toast');
+  const toastMsg = document.getElementById('toast-message');
+  if (!toast || !toastMsg) return;
+
+  toastMsg.textContent = message;
+  const icon = toast.querySelector('i');
+  if (icon) {
+    if (isSuccess) {
+      icon.className = 'fa-solid fa-circle-check text-emerald-400';
+    } else {
+      icon.className = 'fa-solid fa-circle-exclamation text-rose-400';
+    }
+  }
+
+  toast.classList.add('show');
+  
+  if (window.toastTimeout) {
+    clearTimeout(window.toastTimeout);
+  }
+  
+  window.toastTimeout = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3800);
+}
+
+/* ==========================================================================
+   16. EMAIL COPY TO CLIPBOARD
+   ========================================================================== */
+function initEmailCopy() {
+  const copyBtn = document.getElementById('copy-email-btn');
+  if (!copyBtn) return;
+
+  copyBtn.addEventListener('click', async () => {
+    const email = copyBtn.getAttribute('data-email') || 'guptaanchal0321@gmail.com';
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = email;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+      }
+      showToast('Copied email: ' + email, true);
+    } catch (err) {
+      window.location.href = 'mailto:' + email;
+    }
+  });
+}
+
+/* ==========================================================================
+   17. ASYNC WEB3FORMS CONTACT FORM DISPATCHER
+   ========================================================================== */
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const submitBtn = document.getElementById('contact-submit-btn');
+  const btnIcon = document.getElementById('submit-btn-icon');
+  const btnText = document.getElementById('submit-btn-text');
+  const statusMsg = document.getElementById('form-feedback-status');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (!submitBtn) return;
+
+    // Loading UI state
+    submitBtn.disabled = true;
+    if (btnIcon) btnIcon.className = 'fa-solid fa-circle-notch fa-spin';
+    if (btnText) btnText.textContent = 'Sending message...';
+    if (statusMsg) {
+      statusMsg.className = 'text-xs font-mono text-center pt-1 text-slate-400 block';
+      statusMsg.textContent = 'Transmitting direct message to Anchal...';
+    }
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (response.status === 200 && data.success) {
+        showToast('Message sent! Anchal will get back to you shortly.', true);
+        if (statusMsg) {
+          statusMsg.className = 'text-xs font-mono text-center pt-1 text-emerald-400 font-bold block';
+          statusMsg.textContent = '✓ Message sent successfully to Anchal\'s inbox!';
+        }
+        form.reset();
+      } else {
+        throw new Error(data.message || 'Submission failed');
+      }
+    } catch (err) {
+      console.warn('Web3Forms dispatch fallback:', err);
+      showToast('Notice: Opening your email client to send...', false);
+      if (statusMsg) {
+        statusMsg.className = 'text-xs font-mono text-center pt-1 text-cyan-400 block';
+        statusMsg.textContent = 'Opening default email application...';
+      }
+      // Fallback to mailto
+      const name = document.getElementById('user-name')?.value || '';
+      const email = document.getElementById('user-email')?.value || '';
+      const phone = document.getElementById('user-phone')?.value || '';
+      const topic = document.getElementById('user-subject')?.value || 'Portfolio Inquiry';
+      const msg = document.getElementById('user-message')?.value || '';
+      
+      const mailtoUrl = `mailto:guptaanchal0321@gmail.com?subject=${encodeURIComponent(topic)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${msg}`)}`;
+      window.open(mailtoUrl, '_blank');
+    } finally {
+      // Restore submit button state
+      submitBtn.disabled = false;
+      if (btnIcon) btnIcon.className = 'fa-solid fa-paper-plane';
+      if (btnText) btnText.textContent = 'Send Message';
+      
+      setTimeout(() => {
+        if (statusMsg) {
+          statusMsg.classList.add('hidden');
+        }
+      }, 6000);
+    }
+  });
+}
+
+
