@@ -5,6 +5,9 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Initialize Theme Toggle (Light mode default)
+  initThemeToggle();
+
   // 1. Initialize Neural Particle Canvas
   initNeuralCanvas();
 
@@ -1198,8 +1201,6 @@ function initContactForm() {
       // Restore submit button state
       submitBtn.disabled = false;
       if (btnIcon) btnIcon.className = 'fa-solid fa-paper-plane';
-      if (btnText) btnText.textContent = 'Send Message';
-      
       setTimeout(() => {
         if (statusMsg) {
           statusMsg.classList.add('hidden');
@@ -1208,5 +1209,51 @@ function initContactForm() {
     }
   });
 }
+
+/* ==========================================================================
+   18. THEME TOGGLE (LIGHT & DARK MODE)
+   ========================================================================== */
+function initThemeToggle() {
+  const toggleBtn = document.getElementById('theme-toggle-btn');
+  const toggleIcon = document.getElementById('theme-toggle-icon');
+  const mobileToggleBtn = document.getElementById('mobile-theme-toggle-btn');
+  const mobileToggleText = document.getElementById('mobile-theme-toggle-text');
+
+  // Default theme is light
+  const currentTheme = localStorage.getItem('portfolio-theme') || 'light';
+  applyTheme(currentTheme);
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('portfolio-theme', theme);
+
+    if (theme === 'dark') {
+      if (toggleIcon) toggleIcon.className = 'fa-solid fa-sun text-amber-400';
+      if (mobileToggleBtn) {
+        const icon = mobileToggleBtn.querySelector('i');
+        if (icon) icon.className = 'fa-solid fa-sun w-5 text-amber-400';
+        if (mobileToggleText) mobileToggleText.textContent = 'Switch to Light Mode';
+      }
+    } else {
+      if (toggleIcon) toggleIcon.className = 'fa-solid fa-moon text-indigo-500';
+      if (mobileToggleBtn) {
+        const icon = mobileToggleBtn.querySelector('i');
+        if (icon) icon.className = 'fa-solid fa-moon w-5 text-indigo-500';
+        if (mobileToggleText) mobileToggleText.textContent = 'Switch to Dark Mode';
+      }
+    }
+  }
+
+  function toggle() {
+    const activeTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const nextTheme = activeTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme);
+    showToast(`Switched to ${nextTheme.toUpperCase()} mode!`, true);
+  }
+
+  toggleBtn?.addEventListener('click', toggle);
+  mobileToggleBtn?.addEventListener('click', toggle);
+}
+
 
 

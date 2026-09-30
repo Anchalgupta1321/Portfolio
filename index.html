@@ -64,6 +64,11 @@
 
       <!-- Action Buttons -->
       <div class="nav-actions flex items-center gap-2">
+        <!-- Theme Switcher -->
+        <button id="theme-toggle-btn" class="btn btn-xs btn-glass" title="Toggle Light / Dark Mode" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon text-indigo-500" id="theme-toggle-icon"></i>
+        </button>
+
         <button id="open-resume-btn" class="btn btn-xs btn-glass" title="View Resumes">
           <i class="fa-solid fa-file-lines text-indigo-400"></i>
           <span>Resume</span>
@@ -92,6 +97,9 @@
           <a href="#skills" class="mobile-nav-link"><i class="fa-solid fa-code w-5 text-emerald-400"></i> Technical Skills</a>
           <a href="#achievements" class="mobile-nav-link"><i class="fa-solid fa-trophy w-5 text-yellow-400"></i> Achievements &amp; Programs</a>
           <a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-envelope w-5 text-rose-400"></i> Contact</a>
+          <button id="mobile-theme-toggle-btn" class="mobile-nav-link text-left w-full mt-2 pt-2 border-t border-slate-200">
+            <i class="fa-solid fa-moon w-5 text-indigo-500"></i> <span id="mobile-theme-toggle-text">Switch to Dark Mode</span>
+          </button>
         </div>
       </div>
     </div>
