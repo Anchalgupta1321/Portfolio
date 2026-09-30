@@ -64,13 +64,8 @@
 
       <!-- Action Buttons -->
       <div class="nav-actions flex items-center gap-2">
-        <!-- Theme Switcher -->
-        <button id="theme-toggle-btn" class="btn btn-xs btn-glass" title="Toggle Light / Dark Mode" aria-label="Toggle theme">
-          <i class="fa-solid fa-moon text-indigo-500" id="theme-toggle-icon"></i>
-        </button>
-
         <button id="open-resume-btn" class="btn btn-xs btn-glass" title="View Resumes">
-          <i class="fa-solid fa-file-lines text-indigo-400"></i>
+          <i class="fa-solid fa-file-lines text-indigo-500"></i>
           <span>Resume</span>
         </button>
 
@@ -97,9 +92,6 @@
           <a href="#skills" class="mobile-nav-link"><i class="fa-solid fa-code w-5 text-emerald-400"></i> Technical Skills</a>
           <a href="#achievements" class="mobile-nav-link"><i class="fa-solid fa-trophy w-5 text-yellow-400"></i> Achievements &amp; Programs</a>
           <a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-envelope w-5 text-rose-400"></i> Contact</a>
-          <button id="mobile-theme-toggle-btn" class="mobile-nav-link text-left w-full mt-2 pt-2 border-t border-slate-200">
-            <i class="fa-solid fa-moon w-5 text-indigo-500"></i> <span id="mobile-theme-toggle-text">Switch to Dark Mode</span>
-          </button>
         </div>
       </div>
     </div>
@@ -166,19 +158,22 @@
           <div class="flex flex-wrap items-center gap-2 mb-3.5">
             <span class="skill-chip font-mono text-[11px]"><i class="fa-solid fa-graduation-cap text-indigo-400"></i> 8.56 CGPA (Vidyashilp)</span>
             <span class="skill-chip font-mono text-[11px]"><i class="fa-solid fa-briefcase text-cyan-400"></i> 3+ Industry Internships</span>
-            <span class="skill-chip font-mono text-[11px]"><i class="fa-solid fa-code-commit text-purple-400"></i> 8 Production Projects</span>
+            <span class="skill-chip font-mono text-[11px]"><i class="fa-solid fa-code-commit text-purple-400"></i> 9 Featured Projects</span>
             <span class="skill-chip font-mono text-[11px]"><i class="fa-solid fa-trophy text-yellow-400"></i> 1st IEEE Idea Pitch</span>
           </div>
 
           <!-- Real-World Work Live Indicators -->
           <div class="flex flex-wrap items-center gap-2 text-[11px] font-mono">
             <a href="https://enterprise-research-agent-nzp42bp4cvdaeaaoybprqi.streamlit.app/" target="_blank" rel="noopener noreferrer" class="badge-live hover:border-emerald-400/60 hover:text-emerald-300 transition-colors" title="Launch Enterprise AI Research Agent Live App">
-              <i class="fa-solid fa-circle text-[6px] text-emerald-400 animate-pulse"></i> LIVE: Enterprise AI Research Agent <i class="fa-solid fa-arrow-up-right-from-square text-[9px] ml-0.5"></i>
+              <i class="fa-solid fa-circle text-[6px] text-emerald-400 animate-pulse"></i> LIVE: Research Agent <i class="fa-solid fa-arrow-up-right-from-square text-[9px] ml-0.5"></i>
+            </a>
+            <a href="https://ai-resume-insights-prz6.onrender.com/" target="_blank" rel="noopener noreferrer" class="badge-live hover:border-emerald-400/60 hover:text-emerald-300 transition-colors" title="Launch AI Resume Insights Live App">
+              <i class="fa-solid fa-circle text-[6px] text-emerald-400 animate-pulse"></i> LIVE: Resume Insights <i class="fa-solid fa-arrow-up-right-from-square text-[9px] ml-0.5"></i>
             </a>
             <a href="https://www.pavithramfoods.com/" target="_blank" rel="noopener noreferrer" class="badge-live hover:border-cyan-400/60 hover:text-cyan-300 transition-colors" title="Visit Pavithram Foods Official Website">
               <i class="fa-solid fa-circle text-[6px] text-cyan-400"></i> LIVE: Pavithram Foods <i class="fa-solid fa-arrow-up-right-from-square text-[9px] ml-0.5"></i>
             </a>
-            <span class="badge-live"><i class="fa-solid fa-circle text-[6px] text-purple-400"></i> PROD: GRX10 Solutions</span>
+            <span class="badge-live">🏢 GRX10 Solutions (Junior Software Engineer)</span>
           </div>
 
         </div>
@@ -273,7 +268,7 @@
       <div class="max-w-5xl mx-auto px-5">
         
         <div class="section-header text-center mb-6">
-          <span class="section-subtitle text-indigo-400 font-mono text-xs tracking-wider uppercase">01 // Profile</span>
+          <span class="section-subtitle text-indigo-400 font-mono text-xs tracking-wider uppercase">01 — Profile</span>
           <h2 class="section-title font-outfit text-2xl sm:text-3xl font-extrabold text-white mt-1">
             About Me
           </h2>
@@ -299,24 +294,24 @@
                 </div>
 
                 <!-- Structured Profile Specs -->
-                <div class="space-y-2.5 text-xs">
+                <div class="space-y-1 text-xs">
                   
                   <!-- Current Role -->
-                  <div class="grid grid-cols-[105px_1fr] items-center py-1.5 border-b border-slate-200/70">
-                    <span class="text-slate-500 flex items-center gap-1.5 font-medium"><i class="fa-solid fa-briefcase text-cyan-500 w-4 text-center"></i> Role</span>
-                    <span class="text-white font-semibold text-right">Junior Software Engineer</span>
+                  <div class="spec-row">
+                    <span class="spec-label"><i class="fa-solid fa-briefcase text-cyan-500 w-4 text-center"></i> Role</span>
+                    <span class="spec-value">Junior Software Engineer</span>
                   </div>
 
                   <!-- Education -->
-                  <div class="grid grid-cols-[105px_1fr] items-center py-1.5 border-b border-slate-200/70">
-                    <span class="text-slate-500 flex items-center gap-1.5 font-medium"><i class="fa-solid fa-graduation-cap text-indigo-500 w-4 text-center"></i> Degree</span>
-                    <span class="text-slate-700 font-semibold text-right">B.Tech CSE (Data Science)</span>
+                  <div class="spec-row">
+                    <span class="spec-label"><i class="fa-solid fa-graduation-cap text-indigo-500 w-4 text-center"></i> Degree</span>
+                    <span class="spec-value">B.Tech CSE (Data Science)</span>
                   </div>
 
                   <!-- CGPA -->
-                  <div class="grid grid-cols-[105px_1fr] items-center py-1.5 border-b border-slate-200/70">
-                    <span class="text-slate-500 flex items-center gap-1.5 font-medium"><i class="fa-solid fa-award text-emerald-500 w-4 text-center"></i> CGPA</span>
-                    <span class="text-emerald-500 font-bold font-mono text-right">8.56 / 10 <span class="text-slate-400 font-normal text-[11px]">(Vidyashilp)</span></span>
+                  <div class="spec-row">
+                    <span class="spec-label"><i class="fa-solid fa-award text-emerald-500 w-4 text-center"></i> CGPA</span>
+                    <span class="spec-value text-emerald-500 font-bold font-mono">8.56 / 10 <span class="text-slate-400 font-normal text-[11px]">(Vidyashilp)</span></span>
                   </div>
 
                   <!-- Focus Areas -->
@@ -382,7 +377,7 @@
       <div class="max-w-5xl mx-auto px-5">
         
         <div class="section-header text-center mb-6">
-          <span class="section-subtitle text-yellow-400 font-mono text-xs tracking-wider uppercase">02 // Technical Implementations</span>
+          <span class="section-subtitle text-yellow-400 font-mono text-xs tracking-wider uppercase">02 — Featured Projects</span>
           <h2 class="section-title font-outfit text-2xl sm:text-3xl font-extrabold text-white mt-1">
             Featured Projects ⭐
           </h2>
@@ -392,7 +387,7 @@
         <!-- Filter Controls & Search -->
         <div class="flex flex-col sm:flex-row items-center justify-between gap-3 mb-6">
           <div class="project-filter-tabs flex flex-wrap justify-center gap-1.5">
-            <button class="filter-btn active" data-filter="all">All Projects (8)</button>
+            <button class="filter-btn active" data-filter="all">All Projects (9)</button>
             <button class="filter-btn filter-ai" data-filter="ai">🤖 AI / GenAI (4)</button>
             <button class="filter-btn filter-sw" data-filter="software">💻 Software Engineering (3)</button>
             <button class="filter-btn filter-data" data-filter="data">📊 Data / ML (2)</button>
@@ -435,7 +430,7 @@
                     <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
                   </button>
                   <a href="https://enterprise-research-agent-nzp42bp4cvdaeaaoybprqi.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live App</a>
-                  <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass"><i class="fa-brands fa-github"></i> GitHub</a>
+                  <a href="https://github.com/Anchalgupta1321/enterprise-research-agent" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass"><i class="fa-brands fa-github"></i> GitHub</a>
                 </div>
               </div>
 
@@ -451,7 +446,7 @@
                 </div>
               </div>
 
-              <div class="architecture-flow p-3 sm:p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 font-mono text-[11px] text-slate-300 mb-4 flex items-center justify-between flex-wrap gap-1.5">
+              <div class="architecture-flow py-1.5 px-3 rounded-lg bg-slate-950/80 border border-slate-800 font-mono text-[10px] text-slate-300 my-4 flex items-center justify-between flex-wrap gap-1.5">
                 <span>User</span> → <span class="text-cyan-400">Streamlit UI</span> → <span class="text-indigo-400">FastAPI Backend</span> → <span class="text-purple-400">Search Agent (Tavily)</span> + <span class="text-emerald-400">FAISS Retrieval</span> → <span class="text-white font-bold">Report Synthesis</span>
               </div>
 
@@ -492,7 +487,7 @@
                   <button class="btn btn-xs btn-glass view-deep-dive-btn" data-project-id="support-rag">
                     <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
                   </button>
-                  <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass"><i class="fa-brands fa-github"></i> GitHub</a>
+                  <a href="https://github.com/Anchalgupta1321/customer-support-ai" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass"><i class="fa-brands fa-github"></i> GitHub</a>
                 </div>
               </div>
 
@@ -536,7 +531,7 @@
                   <button class="btn btn-xs btn-glass view-deep-dive-btn" data-project-id="deepfake-detection">
                     <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
                   </button>
-                  <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass"><i class="fa-brands fa-github"></i> GitHub</a>
+                  <a href="https://github.com/Anchalgupta1321/DeepFake-Detection" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass"><i class="fa-brands fa-github"></i> GitHub</a>
                 </div>
               </div>
 
@@ -572,7 +567,6 @@
                   <button class="btn btn-xs btn-glass view-deep-dive-btn" data-project-id="crowd-forecasting">
                     <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
                   </button>
-                  <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass"><i class="fa-brands fa-github"></i> GitHub</a>
                 </div>
               </div>
 
@@ -622,11 +616,10 @@
                   <button class="btn btn-xs btn-glass view-deep-dive-btn" data-project-id="healthcare-ehr">
                     <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
                   </button>
-                  <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass"><i class="fa-brands fa-github"></i> GitHub</a>
                 </div>
               </div>
 
-              <div class="architecture-flow p-3 sm:p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 font-mono text-[11px] text-slate-300 my-3.5 flex items-center justify-between flex-wrap gap-1.5">
+              <div class="architecture-flow py-1.5 px-3 rounded-lg bg-slate-950/80 border border-slate-800 font-mono text-[10px] text-slate-300 my-4 flex items-center justify-between flex-wrap gap-1.5">
                 <span>Medical Document</span> → <span class="text-indigo-400">OCR Extraction</span> → <span class="text-cyan-400">FastAPI Services</span> → <span class="text-purple-400">PostgreSQL Schema</span> → <span class="text-emerald-400">EHR Modules</span> → <span class="text-white font-bold">Clinical Users</span>
               </div>
 
@@ -697,7 +690,6 @@
                   <button class="btn btn-xs btn-glass view-deep-dive-btn" data-project-id="amivya-health">
                     <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
                   </button>
-                  <a href="#contact" class="btn btn-xs btn-glass"><i class="fa-solid fa-arrow-up-right-from-square"></i> Case Study</a>
                 </div>
               </div>
 
@@ -745,7 +737,6 @@
                   <button class="btn btn-xs btn-glass view-deep-dive-btn" data-project-id="etl-warehouse">
                     <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
                   </button>
-                  <a href="#contact" class="btn btn-xs btn-glass"><i class="fa-solid fa-database"></i> Architecture</a>
                 </div>
               </div>
 
@@ -769,6 +760,7 @@
                 <div>
                   <div class="flex items-center gap-2 mb-1">
                     <span class="text-xl">📄</span>
+                    <span class="badge-pill badge-live-pill"><i class="fa-solid fa-circle text-[6px] text-emerald-400"></i> LIVE DEMO</span>
                     <span class="badge-pill badge-data">AI &amp; Automation</span>
                     <span class="metric-badge">40–50% Eval Reduction</span>
                   </div>
@@ -781,7 +773,8 @@
                   <button class="btn btn-xs btn-glass view-deep-dive-btn" data-project-id="resume-analyzer">
                     <i class="fa-solid fa-diagram-project text-cyan-400"></i> Architecture &amp; Deep Dive
                   </button>
-                  <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass"><i class="fa-brands fa-github"></i> GitHub</a>
+                  <a href="https://ai-resume-insights-prz6.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live App</a>
+                  <a href="https://github.com/Anchalgupta1321/ai_resume_insights" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass"><i class="fa-brands fa-github"></i> GitHub</a>
                 </div>
               </div>
 
@@ -811,14 +804,14 @@
       <div class="max-w-4xl mx-auto px-5">
         
         <div class="section-header text-center mb-8">
-          <span class="section-subtitle text-indigo-400 font-mono text-xs tracking-wider uppercase">03 // Professional History</span>
+          <span class="section-subtitle text-indigo-400 font-mono text-xs tracking-wider uppercase">03 — Work Experience</span>
           <h2 class="section-title font-outfit text-2xl sm:text-3xl font-extrabold text-white mt-1">
             Experience 💼
           </h2>
           <div class="title-bar mx-auto mt-2"></div>
         </div>
 
-        <div class="timeline-container relative pl-6">
+        <div class="timeline-container relative">
           <div class="timeline-line"></div>
 
           <!-- Company 1: GRX10 Solutions (Progression from Intern to Junior Software Engineer) -->
@@ -936,7 +929,7 @@
       <div class="max-w-5xl mx-auto px-5">
         
         <div class="section-header text-center mb-8">
-          <span class="section-subtitle text-cyan-400 font-mono text-xs tracking-wider uppercase">04 // Master Toolkit</span>
+          <span class="section-subtitle text-cyan-400 font-mono text-xs tracking-wider uppercase">04 — Technical Skills</span>
           <h2 class="section-title font-outfit text-2xl sm:text-3xl font-extrabold text-white mt-1">
             Technical Skills
           </h2>
@@ -1021,7 +1014,7 @@
       <div class="max-w-5xl mx-auto px-5">
         
         <div class="section-header text-center mb-8">
-          <span class="section-subtitle text-yellow-400 font-mono text-xs tracking-wider uppercase">05 // Recognition</span>
+          <span class="section-subtitle text-yellow-400 font-mono text-xs tracking-wider uppercase">05 — Achievements &amp; Honors</span>
           <h2 class="section-title font-outfit text-2xl sm:text-3xl font-extrabold text-white mt-1">
             Achievements &amp; Programs 🏆
           </h2>
@@ -1103,65 +1096,59 @@
       </div>
     </section>
 
-    <!-- ==================== 8. GITHUB & OPEN SOURCE PINNED ==================== -->
-    <section class="section-container py-10 relative">
-      <div class="max-w-5xl mx-auto px-5 text-center">
-        <div class="glass-card p-6 border-slate-800">
-          <i class="fa-brands fa-github text-3xl text-white mb-2"></i>
-          <h3 class="font-outfit text-xl font-bold text-white mb-1">Explore Code &amp; Repositories</h3>
-          <p class="text-slate-400 text-xs max-w-xl mx-auto mb-4">
-            Detailed READMEs, architecture case studies, setup instructions, and clean code for all 8 featured projects.
-          </p>
-          <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-            <i class="fa-brands fa-github"></i> Visit GitHub: Anchalgupta1321
-          </a>
-        </div>
-      </div>
-    </section>
+
 
     <!-- ==================== 9. CONTACT SECTION ==================== -->
     <section id="contact" class="section-container py-12 relative bg-slate-950/60">
       <div class="max-w-4xl mx-auto px-5">
         
         <div class="section-header text-center mb-8">
-          <span class="section-subtitle text-cyan-400 font-mono text-xs tracking-wider uppercase">06 // Connect</span>
+          <span class="section-subtitle text-cyan-400 font-mono text-xs tracking-wider uppercase">06 — Contact &amp; Connect</span>
           <h2 class="section-title font-outfit text-2xl sm:text-3xl font-extrabold text-white mt-1">
             Let's Build Something Meaningful
           </h2>
           <div class="title-bar mx-auto mt-2"></div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3.5 mb-6">
+        <div class="contact-grid">
           <!-- Email Card -->
-          <div class="glass-card p-5 text-center cursor-pointer hover:border-indigo-500/40 transition-colors" id="copy-email-btn" data-email="guptaanchal0321@gmail.com">
-            <i class="fa-solid fa-envelope text-indigo-400 text-xl mb-1"></i>
-            <span class="text-[11px] font-mono text-slate-400 block">Direct Email</span>
-            <span class="text-xs font-semibold text-white block truncate" title="guptaanchal0321@gmail.com">guptaanchal0321@gmail.com</span>
-            <span class="text-[10px] text-indigo-300 font-mono mt-1 inline-block"><i class="fa-regular fa-copy"></i> Click to copy</span>
+          <div class="contact-card" id="copy-email-btn" data-email="guptaanchal0321@gmail.com" role="button" tabindex="0" title="Click to copy email">
+            <div class="contact-icon-box icon-email">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <span class="contact-card-type">Direct Email</span>
+            <span class="contact-card-value">guptaanchal0321@gmail.com</span>
+            <span class="contact-card-badge"><i class="fa-regular fa-copy"></i> Copy Email</span>
           </div>
 
           <!-- Phone & WhatsApp Card -->
-          <a href="tel:+917807647835" class="glass-card p-5 text-center hover:border-emerald-500/40 transition-colors block">
-            <i class="fa-solid fa-phone text-emerald-400 text-xl mb-1"></i>
-            <span class="text-[11px] font-mono text-slate-400 block">Phone / Mobile</span>
-            <span class="text-xs font-semibold text-white block">+91 7807647835</span>
-            <span class="text-[10px] text-emerald-300 font-mono mt-1 inline-block"><i class="fa-solid fa-phone-volume"></i> Call / WhatsApp</span>
+          <a href="tel:+917807647835" class="contact-card" title="Call or WhatsApp">
+            <div class="contact-icon-box icon-phone">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <span class="contact-card-type">Phone / Mobile</span>
+            <span class="contact-card-value">+91 7807647835</span>
+            <span class="contact-card-badge"><i class="fa-solid fa-phone-volume"></i> Call / WhatsApp</span>
           </a>
 
           <!-- LinkedIn Card -->
-          <a href="https://www.linkedin.com/in/anchal-gupta-71436b254/" target="_blank" rel="noopener noreferrer" class="glass-card p-5 text-center hover:border-cyan-500/40 transition-colors">
-            <i class="fa-brands fa-linkedin-in text-cyan-400 text-xl mb-1"></i>
-            <span class="text-[11px] font-mono text-slate-400 block">LinkedIn</span>
-            <span class="text-xs font-semibold text-white block">Anchal Gupta</span>
-            <span class="text-[10px] text-cyan-300 font-mono mt-1 inline-block"><i class="fa-solid fa-arrow-up-right-from-square"></i> Connect profile</span>
+          <a href="https://www.linkedin.com/in/anchal-gupta-71436b254/" target="_blank" rel="noopener noreferrer" class="contact-card" title="Open LinkedIn Profile">
+            <div class="contact-icon-box icon-linkedin">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <span class="contact-card-type">LinkedIn</span>
+            <span class="contact-card-value">Anchal Gupta</span>
+            <span class="contact-card-badge"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Profile</span>
           </a>
 
           <!-- GitHub Card -->
-          <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="glass-card p-5 text-center hover:border-purple-500/40 transition-colors">
-            <i class="fa-brands fa-github text-purple-400 text-xl mb-1"></i>
-            <span class="text-[11px] font-mono text-slate-400 block">GitHub</span>
-            <span class="text-xs font-semibold text-white block">Anchalgupta1321</span>
-            <span class="text-[10px] text-purple-300 font-mono mt-1 inline-block"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Repos</span>
+          <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="contact-card" title="Open GitHub Profile">
+            <div class="contact-icon-box icon-github">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <span class="contact-card-type">GitHub</span>
+            <span class="contact-card-value">@Anchalgupta1321</span>
+            <span class="contact-card-badge"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Repos</span>
           </a>
         </div>
 
@@ -1210,7 +1197,7 @@
       <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-800">
         <div>
           <h3 class="font-outfit font-black text-2xl text-white">Anchal Gupta</h3>
-          <p class="text-xs font-mono text-cyan-400 font-semibold mt-0.5">Software Engineer | AI/ML &amp; Data</p>
+          <p class="text-xs font-semibold text-cyan-400 mt-0.5">Software Engineer | AI/ML &amp; Data</p>
         </div>
         <div class="flex items-center gap-2">
           <button id="print-resume-btn" class="btn btn-sm btn-primary">
@@ -1221,7 +1208,7 @@
       </div>
 
       <!-- Contact Info Bar -->
-      <div class="flex flex-wrap items-center gap-2 py-3 border-b border-slate-800/80 text-xs font-mono">
+      <div class="flex flex-wrap items-center gap-2 py-3 border-b border-slate-800/80 text-xs">
         <span class="resume-contact-link"><i class="fa-solid fa-location-dot text-slate-400"></i> Bengaluru, India</span>
         <a href="tel:+917807647835" class="resume-contact-link text-emerald-400"><i class="fa-solid fa-phone"></i> +91 7807647835</a>
         <a href="mailto:guptaanchal0321@gmail.com" class="resume-contact-link text-indigo-300"><i class="fa-solid fa-envelope"></i> guptaanchal0321@gmail.com</a>
@@ -1231,7 +1218,7 @@
 
       <!-- Targeted Resume Version Selector -->
       <div class="resume-track-selector bg-slate-900/80 p-3 rounded-xl border border-slate-800 my-4 flex flex-wrap items-center justify-between gap-2.5">
-        <span class="text-xs font-mono text-slate-300 font-medium">Targeted Track Views:</span>
+        <span class="text-xs text-slate-300 font-medium">Targeted Track Views:</span>
         <div class="flex flex-wrap gap-1.5" id="resume-track-buttons">
           <button class="resume-tab-btn active" data-track="all">📄 Master Profile (All)</button>
           <button class="resume-tab-btn" data-track="swe">💻 Software Engineer Track</button>
@@ -1240,48 +1227,48 @@
       </div>
 
       <!-- Printable Resume Sheet Body -->
-      <div id="resume-printable-content" class="resume-printable-sheet py-2 space-y-4 text-xs">
+      <div id="resume-printable-content" class="resume-printable-sheet py-2">
         
         <!-- Summary -->
-        <div>
-          <h4 class="font-outfit font-bold text-white text-xs tracking-wider uppercase mb-1.5 text-cyan-400">Professional Summary</h4>
-          <p class="leading-relaxed text-slate-300 text-[11.5px]" id="resume-summary-text">
+        <div class="resume-section">
+          <h4 class="resume-section-title">Professional Summary</h4>
+          <p class="resume-entry-body" id="resume-summary-text">
             Computer Science graduate specializing in Data Science with comprehensive hands-on experience across software engineering, artificial intelligence, machine learning, and data engineering. Progressed to Junior Software Engineer at GRX10 Solutions after developer internship, with AI research internship at UST Global and cloud data engineering internship at Tata Trent Limited.
           </p>
         </div>
 
         <!-- Work Experience -->
-        <div>
-          <h4 class="font-outfit font-bold text-white text-xs tracking-wider uppercase mb-2 text-cyan-400">Work Experience</h4>
+        <div class="resume-section">
+          <h4 class="resume-section-title">Work Experience</h4>
           
-          <div class="mb-3.5 space-y-1">
-            <div class="flex justify-between items-baseline font-bold text-white">
+          <div class="resume-entry">
+            <div class="resume-entry-header">
               <span>Junior Software Engineer — GRX10 Solutions Pvt. Ltd.</span>
-              <span class="font-mono text-cyan-400 text-[11px]">Jul 2026 – Present</span>
+              <span class="resume-entry-date">Jul 2026 – Present</span>
             </div>
-            <p class="text-slate-300 text-[11px] leading-relaxed">
+            <p class="resume-entry-body">
               • Engineered modular full-stack architectures, low-code automation workflows, and RESTful APIs using FastAPI, React, TypeScript, and PostgreSQL.<br />
               • Integrated WhatsApp Meta Graph APIs &amp; Azure microservices; established automated end-to-end integration testing suites with PyTest &amp; Playwright.
             </p>
           </div>
 
-          <div class="mb-3.5 space-y-1">
-            <div class="flex justify-between items-baseline font-bold text-white">
+          <div class="resume-entry">
+            <div class="resume-entry-header">
               <span>AI/ML Research Intern — UST Global</span>
-              <span class="font-mono text-indigo-400 text-[11px]">Jun 2025 – Jul 2025</span>
+              <span class="resume-entry-date">Jun 2025 – Jul 2025</span>
             </div>
-            <p class="text-slate-300 text-[11px] leading-relaxed">
+            <p class="resume-entry-body">
               • Developed multimodal emotion recognition pipelines combining textual sentiment, speech acoustic features, and facial expression analysis.<br />
               • Researched automated autism screening workflows and implemented Explainable AI (XAI) feature attribution for clinical explainability.
             </p>
           </div>
 
-          <div class="space-y-1">
-            <div class="flex justify-between items-baseline font-bold text-white">
+          <div class="resume-entry">
+            <div class="resume-entry-header">
               <span>IT / Data Engineering Intern — Tata Trent Limited (TATA Group)</span>
-              <span class="font-mono text-purple-400 text-[11px]">May 2024 – Jul 2024</span>
+              <span class="resume-entry-date">May 2024 – Jul 2024</span>
             </div>
-            <p class="text-slate-300 text-[11px] leading-relaxed">
+            <p class="resume-entry-body">
               • Orchestrated automated ETL pipelines using Azure Data Factory and Databricks PySpark; performed enterprise database migration to Azure SQL.<br />
               • Built executive Power BI dashboards with star-schema models, accelerating inventory &amp; sales reporting turnaround by ~30%.
             </p>
@@ -1289,32 +1276,32 @@
         </div>
 
         <!-- Key Projects -->
-        <div>
-          <h4 class="font-outfit font-bold text-white text-xs tracking-wider uppercase mb-2 text-cyan-400">Featured Technical Projects</h4>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-[11px]">
-            <div class="p-2.5 rounded-lg bg-slate-900/50 border border-slate-800/80">
-              <strong class="text-white block">Enterprise AI Research Agent</strong>
-              <span class="text-slate-400">Autonomous multi-agent synthesis system using LangChain, Gemini API, Tavily &amp; FAISS (< 4.2s latency).</span>
+        <div class="resume-section">
+          <h4 class="resume-section-title">Featured Technical Projects</h4>
+          <div id="resume-projects-container" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+              <strong class="text-slate-900 block font-semibold mb-0.5">Enterprise AI Research Agent</strong>
+              <p class="resume-entry-body">Autonomous multi-agent synthesis system using LangChain, Gemini API, Tavily &amp; FAISS (&lt; 4.2s latency).</p>
             </div>
-            <div class="p-2.5 rounded-lg bg-slate-900/50 border border-slate-800/80">
-              <strong class="text-white block">Customer Support Automation Platform</strong>
-              <span class="text-slate-400">RAG pipeline with Sentence-BERT &amp; FAISS on 10K+ support tickets with multi-task NLP categorization.</span>
+            <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+              <strong class="text-slate-900 block font-semibold mb-0.5">Customer Support Automation Platform</strong>
+              <p class="resume-entry-body">RAG pipeline with Sentence-BERT &amp; FAISS on 10K+ support tickets with multi-task NLP categorization.</p>
             </div>
-            <div class="p-2.5 rounded-lg bg-slate-900/50 border border-slate-800/80">
-              <strong class="text-white block">Indian Deepfake Face Detection (99.96% Acc)</strong>
-              <span class="text-slate-400">Deep learning CNN &amp; XceptionNet71 classifier evaluated across 140K+ synthetic images with 100% TNR.</span>
+            <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+              <strong class="text-slate-900 block font-semibold mb-0.5">Indian Deepfake Face Detection (99.96% Acc)</strong>
+              <p class="resume-entry-body">Deep learning CNN &amp; XceptionNet71 classifier evaluated across 140K+ synthetic images with 100% TNR.</p>
             </div>
-            <div class="p-2.5 rounded-lg bg-slate-900/50 border border-slate-800/80">
-              <strong class="text-white block">Pavithram Foods Production Website</strong>
-              <span class="text-slate-400">Live Next.js commercial platform with headless WordPress CMS, Cloudflare edge caching, and 100 Lighthouse score.</span>
+            <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+              <strong class="text-slate-900 block font-semibold mb-0.5">Pavithram Foods Production Website</strong>
+              <p class="resume-entry-body">Live Next.js commercial platform with headless WordPress CMS, Cloudflare edge caching, and 100 Lighthouse score.</p>
             </div>
           </div>
         </div>
 
         <!-- Technical Skills -->
-        <div>
-          <h4 class="font-outfit font-bold text-white text-xs tracking-wider uppercase mb-1.5 text-cyan-400">Technical Skills</h4>
-          <p class="text-[11px] text-slate-300 leading-relaxed font-mono">
+        <div class="resume-section">
+          <h4 class="resume-section-title">Technical Skills</h4>
+          <p id="resume-skills-text" class="resume-entry-body">
             <strong>Languages &amp; Core:</strong> Python, JavaScript, TypeScript, SQL, HTML/CSS, PySpark<br />
             <strong>Frameworks &amp; Backend:</strong> FastAPI, React, Next.js, Django, Node.js, REST APIs, Tailwind CSS<br />
             <strong>AI/ML &amp; Data:</strong> LangChain, RAG, FAISS, Sentence-BERT, Gemini API, OpenCV, YOLOv11, PyTorch, Azure Data Factory, Power BI<br />
@@ -1323,13 +1310,23 @@
         </div>
 
         <!-- Education -->
-        <div>
-          <h4 class="font-outfit font-bold text-white text-xs tracking-wider uppercase mb-1 text-cyan-400">Education &amp; Credentials</h4>
-          <div class="flex justify-between items-baseline text-[11px]">
-            <span><strong>B.Tech (Honours) CSE (Data Science)</strong> — Vidyashilp University, Bengaluru</span>
-            <span class="font-mono text-emerald-400 font-bold">CGPA: 8.56 / 10 (2022–2026)</span>
+        <div class="resume-section">
+          <h4 class="resume-section-title">Education &amp; Credentials</h4>
+          <div class="flex flex-wrap justify-between items-baseline gap-2">
+            <span class="font-semibold text-slate-800 resume-entry-body"><strong>B.Tech (Honours) CSE (Data Science)</strong> — Vidyashilp University, Bengaluru</span>
+            <span class="text-emerald-600 font-bold resume-entry-body">CGPA: 8.56 / 10 (2022–2026)</span>
           </div>
-          <p class="text-slate-400 text-[10px] mt-0.5">Honors &amp; Awards: 1st Place IEEE Idea Pitch Contest • Global Mentorship Program Mentee (Women Who Code)</p>
+          <p class="resume-entry-body mt-1">Honors &amp; Awards: 1st Place, IEEE Idea Pitch Contest • 3rd Rank, CodeO Coding Competition (IEEE Summit 2024) • National Round Selection, Smart India Hackathon (SIH 2025)</p>
+        </div>
+
+        <!-- Bottom Action Bar (Close & Print) -->
+        <div class="pt-4 border-t border-slate-200 flex items-center justify-between gap-3 mt-4">
+          <button id="close-resume-bottom-btn" class="btn btn-xs btn-glass">
+            <i class="fa-solid fa-xmark"></i> Close Window
+          </button>
+          <button id="print-resume-bottom-btn" class="btn btn-xs btn-primary">
+            <i class="fa-solid fa-print"></i> Print / Save PDF
+          </button>
         </div>
 
       </div>
@@ -1365,11 +1362,6 @@
     <i class="fa-solid fa-circle-check text-emerald-400"></i>
     <span id="toast-message">Copied to clipboard!</span>
   </div>
-
-  <!-- Floating Back to Top Button -->
-  <button id="floating-back-to-top" class="floating-back-to-top" aria-label="Scroll to top of page" title="Scroll to top">
-    <i class="fa-solid fa-arrow-up text-sm"></i>
-  </button>
 
   <script src="script.js"></script>
 </body>

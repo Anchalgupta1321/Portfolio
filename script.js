@@ -48,9 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 13. Smooth Scroll Reveal & Interactive Motion
   initScrollReveal();
-
-  // 14. Smooth Internal Scroll & Floating Back-to-Top
-  initSmoothScrollAndBackToTop();
 });
 
 /* ==========================================================================
@@ -449,53 +446,7 @@ function initProjectFiltering() {
   }
 }
 
-/* ==========================================================================
-   7. INTERACTIVE RESUME MODAL
-   ========================================================================== */
-function initResumeModal() {
-  const modal = document.getElementById('resume-modal');
-  const openBtn = document.getElementById('open-resume-btn');
-  const mobileOpenBtn = document.getElementById('mobile-resume-btn');
-  const heroOpenBtn = document.getElementById('hero-resume-trigger');
-  const closeBtn = document.getElementById('close-resume-modal');
-  const printBtn = document.getElementById('print-resume-btn');
 
-  function openModal() {
-    if (modal) modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal() {
-    if (modal) modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }
-
-  if (openBtn) openBtn.addEventListener('click', openModal);
-  if (mobileOpenBtn) mobileOpenBtn.addEventListener('click', openModal);
-  if (heroOpenBtn) heroOpenBtn.addEventListener('click', openModal);
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-
-  // Close on backdrop click
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
-    });
-  }
-
-  // Close on Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
-      closeModal();
-    }
-  });
-
-  // Print handler
-  if (printBtn) {
-    printBtn.addEventListener('click', () => {
-      window.print();
-    });
-  }
-}
 
 /* ==========================================================================
    8. MOBILE DRAWER NAVIGATION
@@ -523,41 +474,7 @@ function initMobileMenu() {
   });
 }
 
-/* ==========================================================================
-   9. EMAIL COPY & TOAST NOTIFICATION
-   ========================================================================== */
-function initEmailCopy() {
-  const copyBtn = document.getElementById('copy-email-btn');
-  const toast = document.getElementById('toast');
-  const toastMsg = document.getElementById('toast-message');
 
-  if (!copyBtn) return;
-
-  copyBtn.addEventListener('click', () => {
-    const email = copyBtn.getAttribute('data-email') || 'guptaanchal0321@gmail.com';
-
-    navigator.clipboard.writeText(email).then(() => {
-      copyBtn.innerHTML = '<i class="fa-solid fa-check text-emerald-400"></i><span>Copied to Clipboard!</span>';
-      showToast(`Copied ${email}`);
-
-      setTimeout(() => {
-        copyBtn.innerHTML = '<i class="fa-regular fa-copy"></i><span>Copy Email Address</span>';
-      }, 3000);
-    }).catch(() => {
-      showToast(`Email: ${email}`);
-    });
-  });
-
-  function showToast(message) {
-    if (!toast) return;
-    if (toastMsg) toastMsg.textContent = message;
-    toast.classList.add('show');
-
-    setTimeout(() => {
-      toast.classList.remove('show');
-    }, 3500);
-  }
-}
 
 /* ==========================================================================
    10. CONTACT FORM DISPATCHER (MAILTO)
@@ -592,6 +509,8 @@ function initResumeModal() {
   const printResumeBtn = document.getElementById('print-resume-btn');
   const trackButtons = document.querySelectorAll('#resume-track-buttons .resume-tab-btn');
   const summaryText = document.getElementById('resume-summary-text');
+  const projectsContainer = document.getElementById('resume-projects-container');
+  const skillsText = document.getElementById('resume-skills-text');
 
   if (!resumeModal) return;
 
@@ -605,9 +524,13 @@ function initResumeModal() {
     document.body.style.overflow = 'auto';
   }
 
+  const closeResumeBottomBtn = document.getElementById('close-resume-bottom-btn');
+  const printResumeBottomBtn = document.getElementById('print-resume-bottom-btn');
+
   if (openResumeNavBtn) openResumeNavBtn.addEventListener('click', openModal);
   if (openResumeHeroBtn) openResumeHeroBtn.addEventListener('click', openModal);
   if (closeResumeBtn) closeResumeBtn.addEventListener('click', closeModal);
+  if (closeResumeBottomBtn) closeResumeBottomBtn.addEventListener('click', closeModal);
 
   resumeModal.addEventListener('click', (e) => {
     if (e.target === resumeModal) closeModal();
@@ -619,26 +542,120 @@ function initResumeModal() {
     }
   });
 
-  if (printResumeBtn) {
-    printResumeBtn.addEventListener('click', () => {
-      window.print();
-    });
+  function triggerPrint() {
+    window.print();
   }
 
-  // Interactive Track Switcher
+  if (printResumeBtn) printResumeBtn.addEventListener('click', triggerPrint);
+  if (printResumeBottomBtn) printResumeBottomBtn.addEventListener('click', triggerPrint);
+
+  // Interactive Track Switcher Data
   const trackSummaries = {
     'all': 'Computer Science graduate specializing in Data Science with comprehensive hands-on experience across software engineering, artificial intelligence, machine learning, and data engineering. Progressed to Junior Software Engineer at GRX10 Solutions after developer internship, with AI research internship at UST Global and cloud data engineering internship at Tata Trent Limited.',
     'swe': 'Software Engineer specializing in scalable full-stack web applications, RESTful microservices, and backend automation. Production experience building reactive TypeScript/React frontends and high-performance FastAPI & PostgreSQL backends at GRX10 Solutions and commercial e-commerce deployments with automated PyTest & Playwright CI/CD test suites.',
     'aiml': 'AI/ML & Data Engineer with specialized expertise in Generative AI, Multi-Agent LangChain architectures, RAG retrieval pipelines (FAISS/Sentence-BERT), Multimodal Emotion Recognition research at UST Global, and enterprise ETL pipelines on Azure Data Factory and Databricks PySpark at Tata Trent Limited.'
   };
 
+  const trackProjects = {
+    'all': [
+      {
+        title: 'Enterprise AI Research Agent',
+        desc: 'Autonomous multi-agent synthesis system using LangChain, Gemini API, Tavily & FAISS (< 4.2s latency).'
+      },
+      {
+        title: 'Customer Support Automation Platform',
+        desc: 'RAG pipeline with Sentence-BERT & FAISS on 10K+ support tickets with multi-task NLP categorization.'
+      },
+      {
+        title: 'Indian Deepfake Face Detection (99.96% Acc)',
+        desc: 'Deep learning CNN & XceptionNet71 classifier evaluated across 140K+ synthetic images with 100% TNR.'
+      },
+      {
+        title: 'Pavithram Foods Production Website',
+        desc: 'Live Next.js commercial platform with headless WordPress CMS, Cloudflare edge caching, and 100 Lighthouse score.'
+      }
+    ],
+    'swe': [
+      {
+        title: 'Pavithram Foods Production Website',
+        desc: 'Live Next.js commercial platform with headless WordPress CMS, Cloudflare edge caching, and 100 Lighthouse score.'
+      },
+      {
+        title: 'Healthcare EHR Platform & APIs',
+        desc: 'Scalable FastAPI backend & PostgreSQL schemas for medical record OCR workflows with PyTest & Playwright test suites.'
+      },
+      {
+        title: 'Customer Support Automation Platform',
+        desc: 'High-throughput FastAPI REST backend with asynchronous processing queues, sub-18ms vector retrieval, and Streamlit analytics.'
+      },
+      {
+        title: 'Amivya Health Web Platform & WhatsApp Bot',
+        desc: 'Full-stack healthcare web application, Meta Graph WhatsApp APIs, responsive UI engineering, and clinical workflows.'
+      }
+    ],
+    'aiml': [
+      {
+        title: 'Enterprise AI Research Agent',
+        desc: 'Autonomous multi-agent synthesis system using LangChain, Gemini API, Tavily & FAISS (< 4.2s latency).'
+      },
+      {
+        title: 'Customer Support Automation Platform',
+        desc: 'RAG pipeline with Sentence-BERT & FAISS on 10K+ support tickets with multi-task NLP categorization.'
+      },
+      {
+        title: 'Indian Deepfake Face Detection (99.96% Acc)',
+        desc: 'Deep learning CNN & XceptionNet71 classifier evaluated across 140K+ synthetic images with 100% TNR.'
+      },
+      {
+        title: 'Enterprise ETL Data Warehouse & Analytics',
+        desc: 'Automated Azure Data Factory & Databricks PySpark pipelines processing 1M+ records with star-schema Power BI dashboards.'
+      }
+    ]
+  };
+
+  const trackSkills = {
+    'all': '<strong>Languages &amp; Core:</strong> Python, JavaScript, TypeScript, SQL, HTML/CSS, PySpark<br />' +
+      '<strong>Frameworks &amp; Backend:</strong> FastAPI, React, Next.js, Django, Node.js, REST APIs, Tailwind CSS<br />' +
+      '<strong>AI/ML &amp; Data:</strong> LangChain, RAG, FAISS, Sentence-BERT, Gemini API, OpenCV, YOLOv11, PyTorch, Azure Data Factory, Power BI<br />' +
+      '<strong>Databases &amp; DevOps:</strong> PostgreSQL, MySQL, SQLite, Docker, Git/GitHub, Cloudflare Pages, PyTest, Playwright',
+    'swe': '<strong>Languages &amp; Core:</strong> Python, JavaScript, TypeScript, SQL, HTML5, CSS3/Tailwind, Bash<br />' +
+      '<strong>Frameworks &amp; Full-Stack:</strong> FastAPI, React, Next.js, Django, Node.js, RESTful APIs, State Management<br />' +
+      '<strong>Databases &amp; Architecture:</strong> PostgreSQL, MySQL, SQLite, Redis, Microservices, System Design, Schema Design<br />' +
+      '<strong>DevOps &amp; Testing:</strong> Docker, Git/GitHub, Cloudflare Pages, CI/CD, PyTest, Playwright End-to-End Testing',
+    'aiml': '<strong>AI, LLMs &amp; Agents:</strong> LangChain, Multi-Agent Systems, RAG Pipelines, Sentence-BERT, Gemini API, HuggingFace<br />' +
+      '<strong>Deep Learning &amp; CV:</strong> PyTorch, OpenCV, YOLOv11, MTCNN, XceptionNet71, CNNs, Multimodal Emotion Pipelines<br />' +
+      '<strong>Data &amp; Cloud Engineering:</strong> Azure Data Factory, Databricks PySpark, Azure SQL, FAISS Vector Search, Power BI, ETL/ELT<br />' +
+      '<strong>Backend &amp; Tools:</strong> Python, SQL, FastAPI, Streamlit, Docker, PostgreSQL, Git/GitHub'
+  };
+
+  function renderTrackProjects(track) {
+    if (!projectsContainer) return;
+    const projects = trackProjects[track] || trackProjects['all'];
+    projectsContainer.innerHTML = projects.map(p => `
+      <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+        <strong class="text-slate-900 block font-semibold mb-0.5">${p.title}</strong>
+        <p class="resume-entry-body">${p.desc}</p>
+      </div>
+    `).join('');
+  }
+
   trackButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
       trackButtons.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
       const track = btn.getAttribute('data-track');
+      
+      // Update Summary
       if (summaryText && trackSummaries[track]) {
         summaryText.textContent = trackSummaries[track];
+      }
+
+      // Update Featured Projects
+      renderTrackProjects(track);
+
+      // Update Technical Skills
+      if (skillsText && trackSkills[track]) {
+        skillsText.innerHTML = trackSkills[track];
       }
     });
   });
@@ -680,6 +697,7 @@ function initProjectDeepDiveModal() {
       ],
       liveUrl: 'https://enterprise-research-agent-nzp42bp4cvdaeaaoybprqi.streamlit.app/',
       liveLabel: 'Launch Live App',
+      githubUrl: 'https://github.com/Anchalgupta1321/enterprise-research-agent',
       stack: ['Python', 'LangChain', 'Gemini API', 'Tavily API', 'FastAPI', 'Streamlit', 'FAISS', 'SQLite']
     },
     'support-rag': {
@@ -704,6 +722,7 @@ function initProjectDeepDiveModal() {
         '<strong>Hallucination Guardrails:</strong> Set strict 0.75 cosine confidence thresholds before returning automated historical resolutions, routing uncertain queries to human agents.',
         '<strong>Asynchronous Processing:</strong> Decoupled ticket intake from heavy transformer inference via background worker queues to achieve <50ms API response time.'
       ],
+      githubUrl: 'https://github.com/Anchalgupta1321/customer-support-ai',
       stack: ['Python', 'FastAPI', 'RAG', 'Sentence-BERT', 'FAISS', 'Transformers', 'Streamlit', 'PostgreSQL']
     },
     'deepfake-detection': {
@@ -728,6 +747,7 @@ function initProjectDeepDiveModal() {
         '<strong>Architecture Benchmarking:</strong> Evaluated Custom CNN vs ResNet vs XceptionNet71, finding XceptionNet separable convolutions yielded superior subtle artifact detection.',
         '<strong>Inference Optimization:</strong> Applied TensorRT batch quantization allowing real-time video stream inspection at 45 FPS.'
       ],
+      githubUrl: 'https://github.com/Anchalgupta1321/DeepFake-Detection',
       stack: ['Python', 'YOLOv11', 'MTCNN', 'XceptionNet71', 'Custom CNN', 'Stable Diffusion', 'OpenCV']
     },
     'crowd-forecasting': {
@@ -867,6 +887,9 @@ function initProjectDeepDiveModal() {
         '<strong>Fuzzy Skill Matching:</strong> Combined exact dictionary lookup with Sentence-BERT embeddings to match synonymous skills (e.g. "ReactJS" = "React.js" = "React").',
         '<strong>Batch Ingestion:</strong> Automated Google Drive webhook listening so newly uploaded applicant folders are screened in parallel without manual recruiter trigger.'
       ],
+      liveUrl: 'https://ai-resume-insights-prz6.onrender.com/',
+      liveLabel: 'Launch Live App',
+      githubUrl: 'https://github.com/Anchalgupta1321/ai_resume_insights',
       stack: ['Python', 'NLP', 'FastAPI', 'Google Drive API', 'Sentence-BERT', 'Automation']
     }
   };
@@ -947,9 +970,11 @@ function initProjectDeepDiveModal() {
               <i class="fa-solid fa-arrow-up-right-from-square"></i> ${data.liveLabel || 'Live Demo'}
             </a>
           ` : ''}
-          <a href="https://github.com/Anchalgupta1321/" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass">
-            <i class="fa-brands fa-github text-purple-400"></i> View on GitHub
-          </a>
+          ${data.githubUrl ? `
+            <a href="${data.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-glass">
+              <i class="fa-brands fa-github text-purple-400"></i> View on GitHub
+            </a>
+          ` : ''}
           <a href="#contact" class="btn btn-xs btn-secondary" onclick="document.getElementById('project-deep-dive-modal').classList.remove('active'); document.body.style.overflow='auto';">
             <i class="fa-solid fa-paper-plane"></i> Discuss This Project
           </a>
@@ -1117,6 +1142,9 @@ function initEmailCopy() {
 
   copyBtn.addEventListener('click', async () => {
     const email = copyBtn.getAttribute('data-email') || 'guptaanchal0321@gmail.com';
+    const badge = copyBtn.querySelector('.contact-card-badge');
+    const originalBadge = badge ? badge.innerHTML : '<i class="fa-regular fa-copy"></i> Copy Email';
+
     try {
       if (navigator.clipboard && navigator.clipboard.writeText) {
         await navigator.clipboard.writeText(email);
@@ -1128,7 +1156,17 @@ function initEmailCopy() {
         document.execCommand('copy');
         document.body.removeChild(textarea);
       }
+
+      if (badge) {
+        badge.innerHTML = '<i class="fa-solid fa-check text-emerald-500"></i> Copied!';
+      }
       showToast('Copied email: ' + email, true);
+
+      setTimeout(() => {
+        if (badge) {
+          badge.innerHTML = originalBadge;
+        }
+      }, 2500);
     } catch (err) {
       window.location.href = 'mailto:' + email;
     }
@@ -1211,48 +1249,11 @@ function initContactForm() {
 }
 
 /* ==========================================================================
-   18. THEME TOGGLE (LIGHT & DARK MODE)
+   18. LIGHT THEME ENFORCEMENT
    ========================================================================== */
 function initThemeToggle() {
-  const toggleBtn = document.getElementById('theme-toggle-btn');
-  const toggleIcon = document.getElementById('theme-toggle-icon');
-  const mobileToggleBtn = document.getElementById('mobile-theme-toggle-btn');
-  const mobileToggleText = document.getElementById('mobile-theme-toggle-text');
-
-  // Default theme is light
-  const currentTheme = localStorage.getItem('portfolio-theme') || 'light';
-  applyTheme(currentTheme);
-
-  function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('portfolio-theme', theme);
-
-    if (theme === 'dark') {
-      if (toggleIcon) toggleIcon.className = 'fa-solid fa-sun text-amber-400';
-      if (mobileToggleBtn) {
-        const icon = mobileToggleBtn.querySelector('i');
-        if (icon) icon.className = 'fa-solid fa-sun w-5 text-amber-400';
-        if (mobileToggleText) mobileToggleText.textContent = 'Switch to Light Mode';
-      }
-    } else {
-      if (toggleIcon) toggleIcon.className = 'fa-solid fa-moon text-indigo-500';
-      if (mobileToggleBtn) {
-        const icon = mobileToggleBtn.querySelector('i');
-        if (icon) icon.className = 'fa-solid fa-moon w-5 text-indigo-500';
-        if (mobileToggleText) mobileToggleText.textContent = 'Switch to Dark Mode';
-      }
-    }
-  }
-
-  function toggle() {
-    const activeTheme = document.documentElement.getAttribute('data-theme') || 'light';
-    const nextTheme = activeTheme === 'dark' ? 'light' : 'dark';
-    applyTheme(nextTheme);
-    showToast(`Switched to ${nextTheme.toUpperCase()} mode!`, true);
-  }
-
-  toggleBtn?.addEventListener('click', toggle);
-  mobileToggleBtn?.addEventListener('click', toggle);
+  document.documentElement.setAttribute('data-theme', 'light');
+  localStorage.setItem('portfolio-theme', 'light');
 }
 
 
