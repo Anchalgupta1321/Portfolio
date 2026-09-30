@@ -392,29 +392,49 @@ body {
 .text-slate-200 { color: #1e293b; }
 .text-slate-300 { color: #334155; }
 .text-slate-400 { color: #64748b; }
-.text-slate-500 { color: #94a3b8; }
+.text-slate-500 { color: #64748b; }
+.text-slate-700 { color: #334155; }
 .text-indigo-300 { color: #4f46e5; }
 .text-indigo-400 { color: #4338ca; }
+.text-indigo-500 { color: #4f46e5; }
+.text-indigo-600 { color: #4338ca; }
 .text-cyan-300 { color: #0284c7; }
 .text-cyan-400 { color: #0369a1; }
+.text-cyan-500 { color: #0284c7; }
 .text-purple-300 { color: #7c3aed; }
 .text-purple-400 { color: #6d28d9; }
+.text-purple-500 { color: #7c3aed; }
 .text-emerald-400 { color: #059669; }
+.text-emerald-500 { color: #059669; }
 .text-yellow-400 { color: #d97706; }
 
 [data-theme="dark"] .text-white { color: #ffffff; }
 [data-theme="dark"] .text-slate-200 { color: #e2e8f0; }
 [data-theme="dark"] .text-slate-300 { color: #cbd5e1; }
 [data-theme="dark"] .text-slate-400 { color: #94a3b8; }
-[data-theme="dark"] .text-slate-500 { color: #64748b; }
+[data-theme="dark"] .text-slate-500 { color: #94a3b8; }
+[data-theme="dark"] .text-slate-700 { color: #cbd5e1; }
 [data-theme="dark"] .text-indigo-300 { color: #a5b4fc; }
 [data-theme="dark"] .text-indigo-400 { color: #818cf8; }
+[data-theme="dark"] .text-indigo-500 { color: #818cf8; }
+[data-theme="dark"] .text-indigo-600 { color: #a5b4fc; }
 [data-theme="dark"] .text-cyan-300 { color: #67e8f9; }
 [data-theme="dark"] .text-cyan-400 { color: #22d3ee; }
+[data-theme="dark"] .text-cyan-500 { color: #22d3ee; }
 [data-theme="dark"] .text-purple-300 { color: #d8b4fe; }
 [data-theme="dark"] .text-purple-400 { color: #c084fc; }
+[data-theme="dark"] .text-purple-500 { color: #c084fc; }
 [data-theme="dark"] .text-emerald-400 { color: #34d399; }
+[data-theme="dark"] .text-emerald-500 { color: #34d399; }
 [data-theme="dark"] .text-yellow-400 { color: #facc15; }
+
+.border-slate-200 { border-color: rgba(226, 232, 240, 0.95) !important; }
+.border-slate-200\/70 { border-color: rgba(226, 232, 240, 0.7) !important; }
+
+[data-theme="dark"] .border-slate-200,
+[data-theme="dark"] .border-slate-200\/70 {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
 
 .text-gradient-dual {
   background: linear-gradient(135deg, #4f46e5 0%, #0284c7 50%, #7c3aed 100%);
