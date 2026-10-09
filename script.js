@@ -559,34 +559,34 @@ function initResumeModal() {
   const trackProjects = {
     'all': [
       {
-        title: 'Enterprise AI Research Agent',
+        title: 'Enterprise AI Research Agent (Live)',
         desc: 'Autonomous multi-agent synthesis system using LangChain, Gemini API, Tavily & FAISS (< 4.2s latency).'
       },
       {
-        title: 'Customer Support Automation Platform',
-        desc: 'RAG pipeline with Sentence-BERT & FAISS on 10K+ support tickets with multi-task NLP categorization.'
+        title: 'CogniAdapt RL Adaptive AI Tutor (Live)',
+        desc: 'Reinforcement Learning personalized learning engine using Q-Learning & PPO for dynamic student retention.'
       },
       {
-        title: 'Indian Deepfake Face Detection (99.96% Acc)',
-        desc: 'Deep learning CNN & XceptionNet71 classifier evaluated across 140K+ synthetic images with 100% TNR.'
+        title: 'Autism Spectrum Disorder Detection (Live)',
+        desc: 'Multimodal deep learning & Explainable AI (SHAP/LIME) clinical screening system deployed on Render.'
       },
       {
-        title: 'Pavithram Foods Production Website',
-        desc: 'Live Next.js commercial platform with headless WordPress CMS, Cloudflare edge caching, and 100 Lighthouse score.'
+        title: 'AI Resume Analyzer & Insights (Live)',
+        desc: 'Automated candidate parsing & skill evaluation pipeline saving 40-50% screening time.'
       }
     ],
     'swe': [
       {
-        title: 'Pavithram Foods Production Website',
+        title: 'Pavithram Foods Production Website (Live)',
         desc: 'Live Next.js commercial platform with headless WordPress CMS, Cloudflare edge caching, and 100 Lighthouse score.'
+      },
+      {
+        title: 'CogniAdapt RL Adaptive AI Tutor (Live)',
+        desc: 'FastAPI microservices & interactive learning UI with real-time student telemetry ingestion.'
       },
       {
         title: 'Healthcare EHR Platform & APIs',
         desc: 'Scalable FastAPI backend & PostgreSQL schemas for medical record OCR workflows with PyTest & Playwright test suites.'
-      },
-      {
-        title: 'Customer Support Automation Platform',
-        desc: 'High-throughput FastAPI REST backend with asynchronous processing queues, sub-18ms vector retrieval, and Streamlit analytics.'
       },
       {
         title: 'Amivya Health Web Platform & WhatsApp Bot',
@@ -595,20 +595,20 @@ function initResumeModal() {
     ],
     'aiml': [
       {
-        title: 'Enterprise AI Research Agent',
+        title: 'Enterprise AI Research Agent (Live)',
         desc: 'Autonomous multi-agent synthesis system using LangChain, Gemini API, Tavily & FAISS (< 4.2s latency).'
       },
       {
-        title: 'Customer Support Automation Platform',
-        desc: 'RAG pipeline with Sentence-BERT & FAISS on 10K+ support tickets with multi-task NLP categorization.'
+        title: 'CogniAdapt RL Adaptive AI Tutor (Live)',
+        desc: 'Reinforcement Learning personalized learning engine using Q-Learning & PPO for dynamic student retention.'
+      },
+      {
+        title: 'Autism Spectrum Disorder Detection (Live)',
+        desc: 'Multimodal deep learning & Explainable AI (SHAP/LIME) clinical screening system deployed on Render.'
       },
       {
         title: 'Indian Deepfake Face Detection (99.96% Acc)',
         desc: 'Deep learning CNN & XceptionNet71 classifier evaluated across 140K+ synthetic images with 100% TNR.'
-      },
-      {
-        title: 'Enterprise ETL Data Warehouse & Analytics',
-        desc: 'Automated Azure Data Factory & Databricks PySpark pipelines processing 1M+ records with star-schema Power BI dashboards.'
       }
     ]
   };
@@ -891,6 +891,56 @@ function initProjectDeepDiveModal() {
       liveLabel: 'Launch Live App',
       githubUrl: 'https://github.com/Anchalgupta1321/ai_resume_insights',
       stack: ['Python', 'NLP', 'FastAPI', 'Google Drive API', 'Sentence-BERT', 'Automation']
+    },
+    'cogniadapt-tutor': {
+      title: 'CogniAdapt — RL Based Adaptive AI Tutor',
+      subtitle: 'Reinforcement Learning Powered Personalized Learning & Pacing Engine',
+      badge: 'Reinforcement Learning · Q-Learning / PPO · Render Live',
+      metrics: [
+        { value: 'Q-Learning', label: 'RL Policy Algorithm' },
+        { value: 'Real-time', label: 'Adaptive Pacing Engine' },
+        { value: 'FastAPI', label: 'Asynchronous Microservice' },
+        { value: 'Render', label: 'Live Cloud Deployment' }
+      ],
+      architecture: [
+        { name: '1. Student Input', desc: 'Quiz Response & Telemetry' },
+        { name: '2. Telemetry Ingest', desc: 'FastAPI Microservice' },
+        { name: '3. State & Reward Engine', desc: 'Memory Retention & Accuracy Scoring' },
+        { name: '4. RL Agent (Q-Learning/PPO)', desc: 'Policy Optimization & Action Selection' },
+        { name: '5. UI Renderer', desc: 'Personalized Next Lesson / Question' }
+      ],
+      tradeoffs: [
+        '<strong>Exploration vs Exploitation:</strong> Implemented epsilon-greedy decay strategy in Q-Learning to balance testing student limits with reinforcing weak concepts.',
+        '<strong>Reward Signal Design:</strong> Engineered a composite reward function balancing response accuracy, response velocity, and retention decay over multi-session trajectories.'
+      ],
+      liveUrl: 'https://cogniadapt-rl-tutor.onrender.com/ui/',
+      liveLabel: 'Launch Live App',
+      stack: ['Python', 'Reinforcement Learning', 'Q-Learning', 'PPO', 'FastAPI', 'Gymnasium', 'Render']
+    },
+    'autism-detection': {
+      title: 'Autism Spectrum Disorder (ASD) Detection Platform',
+      subtitle: 'Multimodal Deep Learning & Explainable AI (XAI) Clinical Screening System',
+      badge: 'AI / ML & Multimodal Deep Learning · Explainable AI (SHAP) · Render Live',
+      metrics: [
+        { value: 'Multimodal', label: 'Clinical Behavioral Model' },
+        { value: 'SHAP / LIME', label: 'Explainable AI (XAI) Attribution' },
+        { value: '< 100ms', label: 'Diagnostic Inference Speed' },
+        { value: 'Render', label: 'Live Clinical Web App' }
+      ],
+      architecture: [
+        { name: '1. Clinical Inputs', desc: 'Behavioral & Survey Indicators' },
+        { name: '2. Preprocessor', desc: 'Feature Normalization & Embedding' },
+        { name: '3. Multimodal Classifier', desc: 'Deep Neural Risk Assessment' },
+        { name: '4. XAI Engine (SHAP)', desc: 'Feature Attribution & Weighting' },
+        { name: '5. Diagnostic Dashboard', desc: 'Transparent Clinical Report' }
+      ],
+      tradeoffs: [
+        '<strong>Clinical Interpretability:</strong> Integrated SHAP feature importance visualizations to ensure clinicians understand exact contributing factors behind risk ratings.',
+        '<strong>Imbalanced Data Handling:</strong> Applied SMOTE resampling and weighted cross-entropy loss to prevent bias towards majority non-ASD control groups.'
+      ],
+      liveUrl: 'https://autodetect-asd-app.onrender.com/',
+      liveLabel: 'Launch Live App',
+      stack: ['Python', 'AI / ML', 'PyTorch', 'Multimodal AI', 'Explainable AI (XAI)', 'SHAP / LIME', 'FastAPI', 'Streamlit', 'Render']
     }
   };
 
